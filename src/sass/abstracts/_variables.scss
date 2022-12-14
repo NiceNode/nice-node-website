@@ -1,11 +1,30 @@
+// Global Colors
+$black: #000000;
+$black64: rgba(0, 0, 0, 0.64);
+$black80: rgba(0, 0, 0, 0.80);
+$white: #FFFFFF;
+$white64: rgba(255, 255, 255, 0.64);
+$pink1: #FEA4E2;
+$pink2: #FB74C3;
+$orange: #F97320;
+$green: #2C7E45;
+$yellow: #FBCD19;
+$blue: #3A5FE9;
+$purple: #7351EB;
+
+// Themes
 $themes: (
   'light': (
-    'text-color': black,
-    'bg-color': white
+    'textColor': $black,
+    'bgColor': $white,
+    'bgMinimized': $white,
+    'modeIcon': url('../images/moon.svg'),
   ),
   'dark': (
-    'text-color': white,
-    'bg-color': black
+    'textColor': $white,
+    'bgColor': $black,
+    'bgMinimized': $black80,
+    'modeIcon': url('../images/sun.svg'),
   )
 );
 
@@ -17,5 +36,3 @@ $themes: (
     }
   }
 }
-
-$body-color: slateblue;
