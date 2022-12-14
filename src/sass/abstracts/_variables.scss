@@ -1,0 +1,21 @@
+$themes: (
+  'light': (
+    'text-color': black,
+    'bg-color': white
+  ),
+  'dark': (
+    'text-color': white,
+    'bg-color': black
+  )
+);
+
+@each $theme-name, $properties in $themes {
+  body.#{$theme-name} {
+    // define a css variable for each property
+    @each $name, $property in $properties {
+      --#{$name}: #{$property};
+    }
+  }
+}
+
+$body-color: slateblue;

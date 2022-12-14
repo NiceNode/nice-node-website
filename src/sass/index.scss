@@ -1,0 +1,11 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixin';
+
+@import 'base/reset';
+@import 'base/typography';
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+}
