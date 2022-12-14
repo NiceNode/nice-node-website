@@ -55,6 +55,49 @@ header {
     order: 1;
     flex-grow: 1;
     width: 908px;
+
+    .download {
+      a {
+        &:hover {
+          color: var(--downloadColor);
+        }
+      }
+    }
+
+    .support {
+      a {
+        &:hover {
+          color: var(--supportColor);
+        }
+      }
+    }
+
+    .faq {
+      a {
+        &:hover {
+          color: var(--faqColor);
+        }
+      }
+    }
+
+    .docs {
+      a {
+        &:hover {
+          color: var(--docsColor);
+        }
+      }
+    }
+
+    li {
+      cursor: pointer;
+      a {
+        color: var(--textColor);
+        text-decoration: none;
+        display:inline-block;
+        width:100%;
+        height:100%;
+      }
+    }
   }
 
   .icons {
@@ -84,8 +127,11 @@ header {
     }
 
     .switch {
-      -webkit-mask-image: var(--modeIcon);
-      mask-image: var(--modeIcon);
+      -webkit-mask-image: var(--switchIcon);
+      mask-image: var(--switchIcon);
+      &:hover {
+        background-color: var(--switchColor);
+      }
     }
 
     li {
@@ -95,6 +141,10 @@ header {
       width: 30px;
       height: 30px;
       cursor: pointer;
+
+      &:hover {
+        background-color: var(--iconColor);
+      }
 
       a {
         display:inline-block;

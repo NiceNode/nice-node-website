@@ -18,13 +18,25 @@ $themes: (
     'textColor': $black,
     'bgColor': $white,
     'bgMinimized': $white,
-    'modeIcon': url('../images/moon.svg'),
+    'iconColor': $black64,
+    'switchIcon': url('../images/moon.svg'),
+    'switchColor': $purple,
+    'downloadColor': $pink2,
+    'supportColor': $purple,
+    'faqColor': $orange,
+    'docsColor': $blue,
   ),
   'dark': (
     'textColor': $white,
     'bgColor': $black,
     'bgMinimized': $black80,
-    'modeIcon': url('../images/sun.svg'),
+    'iconColor': $white64,
+    'switchIcon': url('../images/sun.svg'),
+    'switchColor': $yellow,
+    'downloadColor': $pink1,
+    'supportColor': $yellow,
+    'faqColor': $orange,
+    'docsColor': $blue,
   )
 );
 
