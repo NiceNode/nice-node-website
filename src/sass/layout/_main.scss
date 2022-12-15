@@ -101,6 +101,21 @@ main {
     font-size: 24px;
     line-height: 30px;
 
+    .asteriskNote {
+      margin-top: 27px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .asteriskContainer {
+      margin-left:8px;
+    }
+
+    .asterisk {
+      width: 16.5px;
+      height: 16px;
+    }
+
     .table {
       margin-top: 56px;
       display: flex;
@@ -253,65 +268,63 @@ main {
   #faq {
     margin-top: 120px;
 
-    /* Accordion styles */
-  .accordion {
-    color: var(--textColor);
-    background-color: transparent;
-    cursor: pointer;
-    padding: 32px 0px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    // transition: 0.4s;
-    font-size: 40px;
-    line-height: 48px;
-    border-bottom: 2px solid var(--textColor);
-
-    &:hover {
+    .accordion {
+      color: var(--textColor);
+      background-color: transparent;
+      cursor: pointer;
+      padding: 32px 0px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 40px;
+      line-height: 48px;
+      border-bottom: 2px solid var(--textColor);
       transition: 0.4s;
-    }
 
-    &.pink {
-      &:hover {
-        color: $pink1;
+      &.pink {
+        &:hover {
+          color: $pink1;
+        }
+      }
+
+      &.yellow {
+        &:hover {
+          color: $yellow;
+        }
+      }
+
+      &.orange {
+        &:hover {
+          color: $orange;
+        }
+      }
+
+      &.blue {
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      &.purple {
+        &:hover {
+          color: $purple;
+        }
       }
     }
-
-    &.yellow {
-      &:hover {
-        color: $yellow;
-      }
+    .active {
+      border-bottom: none;
+      transition:none;
     }
 
-    &.orange {
-      &:hover {
-        color: $orange;
-      }
+    .panel {
+      display: none;
+      background-color: none;
+      overflow: hidden;
+      font-size: 24px;
+      line-height: 30px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--textColor);
     }
-
-    &.blue {
-      &:hover {
-        color: $blue;
-      }
-    }
-
-    &.purple {
-      &:hover {
-        color: $purple;
-      }
-    }
-  }
-  .active {
-    border-bottom: none;
-  }
-  /* Accordion panel styles */
-  .panel {
-    display: none;
-    background-color: none;
-    overflow: hidden;
-    font-size: 24px;
-    line-height: 30px;
-  }
   }
 }
