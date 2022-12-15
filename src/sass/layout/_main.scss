@@ -1,13 +1,15 @@
 main {
+  padding-top: 94px;
+
   .link {
     color: var(--textColor);
     &:hover {
       color: var(--iconColor);
     }
   }
+  
   #top {
     height: 1425px;
-    margin-top: 94px;
 
     .headerTextContainer {
       display: flex;

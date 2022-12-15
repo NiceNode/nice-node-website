@@ -1,4 +1,5 @@
 import '../sass/index.scss';
+// import $ from 'jquery';
 
 document.addEventListener("DOMContentLoaded", function () {
   // modify this later with localCache, local settings detection
@@ -12,3 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
     currentTheme = nextTheme;
   });
 });
+
+// buggy
+
+// var scroll = $(window).scrollTop();
+
+// $(window).scroll(function() {    
+//   scroll = $(window).scrollTop();
+
+//   if (scroll > 500) {
+//       $("header").addClass("minimized");
+//   } else {
+//     $("header").removeClass("minimized");
+//   }
+// });
