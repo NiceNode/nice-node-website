@@ -97,10 +97,49 @@ main {
 
   #requirements {
     margin-top: 118px;
+    font-family: 'Satoshi-Bold';
+    font-size: 24px;
+    line-height: 30px;
+
+    .table {
+      margin-top: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+    }
+    .table-row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 24px 0px;
+      border-bottom: 2px solid var(--textColor);
+      align-self: stretch;
+      justify-content: space-between;
+    }
+    .table-cell {
+      width:33%;
+    }
   }
 
   #download {
     margin-top: 140px;
+
+    .button {
+      box-sizing: border-box;
+      border: 2px solid var(--bgColor);
+      border-radius: 25px;
+      padding: 13px 24px;
+
+      &.small {
+        padding: 8px 18px;
+        border-radius: 18px;
+      }
+
+      &.download {
+        border: 2px solid $white;
+      }
+    }
 
     .downloadHeader {
       font-size: 76px;
@@ -213,5 +252,66 @@ main {
 
   #faq {
     margin-top: 120px;
+
+    /* Accordion styles */
+  .accordion {
+    color: var(--textColor);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 32px 0px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    // transition: 0.4s;
+    font-size: 40px;
+    line-height: 48px;
+    border-bottom: 2px solid var(--textColor);
+
+    &:hover {
+      transition: 0.4s;
+    }
+
+    &.pink {
+      &:hover {
+        color: $pink1;
+      }
+    }
+
+    &.yellow {
+      &:hover {
+        color: $yellow;
+      }
+    }
+
+    &.orange {
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    &.blue {
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    &.purple {
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+  .active {
+    border-bottom: none;
+  }
+  /* Accordion panel styles */
+  .panel {
+    display: none;
+    background-color: none;
+    overflow: hidden;
+    font-size: 24px;
+    line-height: 30px;
+  }
   }
 }
