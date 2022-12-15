@@ -1,13 +1,28 @@
 main {
   padding-top: 94px;
 
+  .dynapuff {
+    font-family: 'DynaPuff';
+  }
+
+  section:not(:first-child) {
+    padding: 0px 48px;
+  }
+
+  section {
+    h3 {
+      font-size: 96px;
+      line-height: 110px;
+    }
+  }
+
   .link {
     color: var(--textColor);
     &:hover {
       color: var(--iconColor);
     }
   }
-  
+
   #top {
     height: 1425px;
 
@@ -29,7 +44,6 @@ main {
         line-height: 96px;
         text-align: center;
         letter-spacing: -0.01em;
-        font-family: 'DynaPuff';
       }
 
       .header {
@@ -65,8 +79,6 @@ main {
   }
 
   #statement {
-    padding: 0px 48px;
-
     p {
       font-size: 76px;
       line-height: 91.2px;
@@ -77,5 +89,129 @@ main {
       line-height: 38.4px;
       margin-top: 64px;
     }
+  }
+
+  #features {
+    margin-top: 160px;
+  }
+
+  #requirements {
+    margin-top: 118px;
+  }
+
+  #download {
+    margin-top: 140px;
+
+    .downloadHeader {
+      font-size: 76px;
+      line-height: 90px;
+    }
+
+    .releaseContainer {
+      margin-top: 34px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .downloadTilesContainer {
+      margin-top: 72px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 32px;
+
+      .downloadTile {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 56px;
+        gap: 10px;
+        border-radius: 100px;
+        margin-right: 32px;
+        width: 314px;
+        height: 244px;
+
+        .downloadPlatform {
+          font-size: 40px;
+          line-height: 48px;
+        }
+
+        .downloadType {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        .downloadIcon {
+          width: 40px;
+          height: 40px;
+          padding: 0;
+        }
+
+        &.macOs {
+          background: $orange;
+
+          .downloadIcon {
+            background-image: url('../images/apple.svg');
+          }
+        }
+        &.windows {
+          background: $blue;
+
+          .downloadIcon {
+            background-image: url('../images/windows.svg');
+          }
+        }
+        &.linux {
+          background: $purple;
+
+          .downloadIcon {
+            background-image: url('../images/linux.svg');
+          }
+        }
+      }
+    }
+  }
+
+  #support {
+    margin-top: 120px;
+    h3 {
+      margin-bottom: 32px;
+    }
+    p {
+      font-size: 48px;
+      line-height: 58px;
+
+      span {
+        background-size: cover;
+        display: inline-block;
+        background-repeat: no-repeat;
+
+        &.ethereumFoundation {
+          background-image: var(--ethereumFoundationImage);
+          width: 29px;
+          height: 48px;
+        }
+
+        &.gitcoinGrants {
+          background-image: var(--gitcoinGrantsImage);
+          width: 39px;
+          height: 48px;
+        }
+
+        &.cityDao {
+          background-image: var(--cityDaoImage);
+          width: 47px;
+          height: 48px;
+        }
+      }
+    }
+  }
+
+  #faq {
+    margin-top: 120px;
   }
 }

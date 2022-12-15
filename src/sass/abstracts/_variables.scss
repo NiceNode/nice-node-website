@@ -26,6 +26,9 @@ $themes: (
     'supportColor': $orange,
     'faqColor': $blue,
     'applicationImage': url('../images/application-light.png'),
+    'ethereumFoundationImage': url('../images/ethereum-light.png'),
+    'gitcoinGrantsImage': url('../images/gitcoin-light.png'),
+    'cityDaoImage': url('../images/citydao-light.png'),
   ),
   'dark': (
     'textColor': $white,
@@ -39,6 +42,9 @@ $themes: (
     'supportColor': $orange,
     'faqColor': $blue,
     'applicationImage': url('../images/application-light.png'),
+    'ethereumFoundationImage': url('../images/ethereum-dark.png'),
+    'gitcoinGrantsImage': url('../images/gitcoin-dark.png'),
+    'cityDaoImage': url('../images/citydao-dark.png'),
   )
 );
 
