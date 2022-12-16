@@ -30,6 +30,28 @@ let currentItem = 1;
 // Create a variable to track the manual change
 let manualChange = false;
 
+// We want to set active state on the current item
+const setActiveClass = () => {
+  switch (currentItem) {
+    case 1:
+      $('#accordion-1').addClass('active');
+      $('#accordion-2, #accordion-3, #accordion-4').removeClass('active');
+      break;
+    case 2:
+      $('#accordion-2').addClass('active');
+      $('#accordion-1, #accordion-3, #accordion-4').removeClass('active');
+      break;
+    case 3:
+      $('#accordion-3').addClass('active');
+      $('#accordion-1, #accordion-2, #accordion-4').removeClass('active');
+      break;
+    case 4:
+      $('#accordion-4').addClass('active');
+      $('#accordion-1, #accordion-2, #accordion-3').removeClass('active');
+      break;
+  }
+};
+
 // Create a function to update the timer
 function updateTimer() {
   // Decrement the time remaining
@@ -228,8 +250,14 @@ function updateTimer() {
       timer3.css('display', 'none');
       timer4.css('display', 'none');
     }
+
+    // Set active state on the next item
+    setActiveClass();
   }
 }
+
+// Set initial active class
+setActiveClass();
 
 // Start the timer for the first accordion item
 let timer = setInterval(function() {
@@ -248,6 +276,10 @@ const reset = (item) => {
 
   // Update immediately, then rely on timer
   timer = updateTimer();
+
+  // Set active state on the next item
+  setActiveClass();
+
   timer = setInterval(function() {
     updateTimer();
   }, 1000);

@@ -107,12 +107,19 @@ main {
       width: 500px;
       cursor: pointer;
       margin-top: 24px;
+
+      &.active {
+        .accordion-headline {
+          color: var(--textColor)
+        }
+      }
     }
 
     /* Style for the accordion headlines */
     .accordion-headline {
       font-size: 32px;
       line-height: 38px;
+      color: var(--iconColor)
     }
 
     /* Style for the accordion descriptions */
