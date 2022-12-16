@@ -240,10 +240,14 @@ const reset = (item) => {
   // Clear any existing timers
   clearInterval(timer);
 
-  // Set the current item to 1 and start the timer
+  // Set to the item we want to reset it to
   currentItem = item;
+
   timeRemaining = 6;
   manualChange = true;
+
+  // Update immediately, then rely on timer
+  timer = updateTimer();
   timer = setInterval(function() {
     updateTimer();
   }, 1000);
