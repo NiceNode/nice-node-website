@@ -18,6 +18,7 @@ main {
 
   .link {
     color: var(--textColor);
+    transition: all 0.4s;
     &:hover {
       color: var(--iconColor);
     }
@@ -136,14 +137,14 @@ main {
       margin-top:24px;
       height: 2px;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: var(--timerBackground);
     }
 
     /* Style for the timer bar */
     .timer-bar {
       width: 20%;
       height: 2px;
-      background-color: #000000;
+      background-color: var(--textColor);
       transition: all 1s;
     }
   }

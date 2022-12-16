@@ -1,8 +1,10 @@
 // Global Colors
 $black: #000000;
+$black40: rgba(0, 0, 0, 0.40);
 $black64: rgba(0, 0, 0, 0.64);
 $black80: rgba(0, 0, 0, 0.80);
 $white: #FFFFFF;
+$white40: rgba(255, 255, 255, 0.40);
 $white64: rgba(255, 255, 255, 0.64);
 $pink1: #FEA4E2;
 $pink2: #FB74C3;
@@ -29,6 +31,7 @@ $themes: (
     'ethereumFoundationImage': url('../images/ethereum-light.png'),
     'gitcoinGrantsImage': url('../images/gitcoin-light.png'),
     'cityDaoImage': url('../images/citydao-light.png'),
+    'timerBackground': $black40,
   ),
   'dark': (
     'textColor': $white,
@@ -45,6 +48,7 @@ $themes: (
     'ethereumFoundationImage': url('../images/ethereum-dark.png'),
     'gitcoinGrantsImage': url('../images/gitcoin-dark.png'),
     'cityDaoImage': url('../images/citydao-dark.png'),
+    'timerBackground': $white40,
   )
 );
 

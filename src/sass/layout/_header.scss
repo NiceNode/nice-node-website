@@ -10,6 +10,7 @@ header {
   color: var(--textColor);
   position: sticky;
   height: 96px;
+  transition: all 0.4s;
 
   &.minimized {
     padding: 16px 48px;
