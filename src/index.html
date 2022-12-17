@@ -7,8 +7,9 @@
   <meta name="description" content="A light foundation for your next frontend project based on webpack.">
 </head>
 <body class="light">
-  <header>
-    <div class="logo"></div>
+  <div id="topOfPage"></div>
+  <header id="test">
+    <div class="logo"><a href="#topOfPage"></a></div>
     <nav>
       <ul class="links">
         <li class="requirements"><a href="#requirements">Requirements</a></li>
@@ -49,28 +50,28 @@
         <div class="accordion-carousel">
           <div class="accordionContainer">
             <div id="accordion-1" class="accordion-item">
-              <div class="accordion-headline">Easy setup</div>
+              <div class="accordion-headline pink">Easy setup</div>
               <div class="accordion-description" id="description-1">Install and set up a node with an actual interface</div>
               <div class="timer-background">
                 <div class="timer-bar" id="timer-1"></div>
               </div>
             </div>
             <div id="accordion-2" class="accordion-item">
-              <div class="accordion-headline">System checker</div>
+              <div class="accordion-headline yellow">System checker</div>
               <div class="accordion-description" id="description-2" style="display: none;">Check your system!</div>
               <div class="timer-background">
                 <div class="timer-bar" id="timer-2" style="display: none;"></div>
               </div>
             </div>
             <div id="accordion-3" class="accordion-item">
-              <div class="accordion-headline">Monitor clients</div>
+              <div class="accordion-headline orange">Monitor clients</div>
               <div class="accordion-description" id="description-3" style="display: none;">Monitor your clients!</div>
               <div class="timer-background">
                 <div class="timer-bar" id="timer-3" style="display: none;"></div>
               </div>
             </div>
             <div id="accordion-4" class="accordion-item">
-              <div class="accordion-headline">Connect your wallet</div>
+              <div class="accordion-headline blue">Connect your wallet</div>
               <div class="accordion-description" id="description-4" style="display: none;">Connect all of your wallets!</div>
               <div class="timer-background">
                 <div class="timer-bar" id="timer-4" style="display: none;"></div>
@@ -125,27 +126,30 @@
     <section id="download">
       <h3 class="downloadHeader">Run a node and become part of a global revolution.</h2>
       <div class="releaseContainer">
-        <div class="button active releaseVersion">Version 0.12 Alpha</div>
+        <div class="button active releaseVersion">Version v1.5.1-alpha</div>
         <div class="button releaseNotes">Release Notes</div>
       </div>
       <div class="downloadTilesContainer">
         <div class="downloadTile macOs">
           <div class="downloadIcon"></div>
+          <div class="divider"></div>
           <div class="downloadPlatform">MacOS</div>
           <div class="downloadType">Apple Silicon and Intel</div>
-          <div class="button download orange">Download</div>
+          <div class="button downloadButton orange">Download</div>
         </div>
         <div class="downloadTile windows">
           <div class="downloadIcon"></div>
+          <div class="divider"></div>
           <div class="downloadPlatform">Windows</div>
           <div class="downloadType">64-bit</div>
-          <div class="button download blue">Download</div>
+          <div class="button downloadButton blue">Download</div>
         </div>
         <div class="downloadTile linux">
           <div class="downloadIcon"></div>
+          <div class="divider"></div>
           <div class="downloadPlatform">Linux</div>
           <div class="downloadType">64-bit</div>
-          <div class="button download purple">Download</div>
+          <div class="button downloadButton purple">Download</div>
         </div>
       </div>
     </section>
