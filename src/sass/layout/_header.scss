@@ -8,32 +8,47 @@ header {
   padding: 32px 48px;
   gap: 40px;
   color: var(--textColor);
-  position: sticky;
   height: 96px;
   transition: all 0.4s;
 
   &.minimized {
     padding: 16px 48px;
     height: 62px;
-    background-color: var(--bgMinimized); // change this
+    position: sticky;
+    background-color: var(--bgMinimized);
+    backdrop-filter: blur(30px);
 
     .logo {
       width: 132px;
       height: 30px;
+      background-size: 132px 30px;
+      background-image: var(--logoMinimizedImage);
     }
+
+    nav {
+      font-size: 20px;
+      line-height: 24px;
+      transition: all 0.4s;
+    }
+
+    .icons {
+      li {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    
   }
 
   .logo {
-    background-color: var(--textColor);
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    -webkit-mask-image: url('../images/Logo.svg');
-    mask-image: url('../images/Logo.svg');
+    background-image: var(--logoImage);
+    background-size: 152px 32px;
     width: 152px;
     height: 32px;
     flex: none;
     order: 0;
     flex-grow: 0;
+    transition: all 0.1s;
   }
 
   nav {
@@ -134,8 +149,8 @@ header {
       background-color: var(--textColor);
       -webkit-mask-size: cover;
       mask-size: cover;
-      width: 30px;
-      height: 30px;
+      width: 45px;
+      height: 45px;
       cursor: pointer;
 
       &:hover {

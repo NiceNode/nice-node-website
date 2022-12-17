@@ -6,6 +6,7 @@ $black80: rgba(0, 0, 0, 0.80);
 $white: #FFFFFF;
 $white40: rgba(255, 255, 255, 0.40);
 $white64: rgba(255, 255, 255, 0.64);
+$white80: rgba(255, 255, 255, 0.80);
 $pink1: #FEA4E2;
 $pink2: #FB74C3;
 $orange: #F97320;
@@ -19,8 +20,11 @@ $themes: (
   'light': (
     'textColor': $black,
     'bgColor': $white,
-    'bgMinimized': $white,
+    'bgMinimized': $white80,
     'iconColor': $black64,
+    'logoImage': url('../images/logo-light.png'),
+    'logoMinimizedImage': url('../images/logo-light-minimized.png'),
+    'logoFooterImage': url('../images/logo-footer-light.png'),
     'switchIcon': url('../images/moon.svg'),
     'switchColor': $purple,
     'requirementsColor': $pink2,
@@ -38,13 +42,16 @@ $themes: (
     'bgColor': $black,
     'bgMinimized': $black80,
     'iconColor': $white64,
+    'logoImage': url('../images/logo-dark.png'),
+    'logoMinimizedImage': url('../images/logo-dark-minimized.png'),
+    'logoFooterImage': url('../images/logo-footer-dark.png'),
     'switchIcon': url('../images/sun.svg'),
     'switchColor': $yellow,
     'requirementsColor': $pink1,
     'downloadColor': $yellow,
     'supportColor': $orange,
     'faqColor': $blue,
-    'applicationImage': url('../images/application-light.png'),
+    'applicationImage': url('../images/application-dark.png'),
     'ethereumFoundationImage': url('../images/ethereum-dark.png'),
     'gitcoinGrantsImage': url('../images/gitcoin-dark.png'),
     'cityDaoImage': url('../images/citydao-dark.png'),

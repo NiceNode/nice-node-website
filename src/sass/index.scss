@@ -13,3 +13,67 @@ body {
   font-family: 'Satoshi-Medium';
   transition: all 0.4s;
 }
+
+.link {
+  color: var(--textColor);
+  transition: all 0.4s;
+  &:hover {
+    color: var(--iconColor);
+  }
+}
+
+.button {
+  box-sizing: border-box;
+  border: 2px solid var(--textColor);
+  border-radius: 25px;
+  padding: 13px 24px;
+  background-color: none;
+  color: var(--textColor);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s;
+
+  &.download {
+    border: 2px solid $white;
+    color: $white;
+
+    &.active, &:hover {
+      background-color: $white;
+
+      &.orange {
+        color: $orange;
+      }
+      &.blue {
+        color: $blue;
+      }
+      &.purple {
+        color: $purple;
+      }
+    }
+
+    &.active {
+      background-color: $white;
+      color: rgba(0, 0, 0, 0);
+    }
+
+    &:hover {
+      background-color: $white;
+      color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  &.active {
+    background-color: var(--textColor);
+    color: var(--bgColor);
+  }
+
+  &:hover {
+    background-color: var(--textColor);
+    color: var(--bgColor);
+  }
+
+  &.small {
+    padding: 8px 18px;
+    border-radius: 18px;
+  }
+}

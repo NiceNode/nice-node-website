@@ -16,14 +16,6 @@ main {
     }
   }
 
-  .link {
-    color: var(--textColor);
-    transition: all 0.4s;
-    &:hover {
-      color: var(--iconColor);
-    }
-  }
-
   #top {
     height: 1425px;
 
@@ -70,11 +62,12 @@ main {
 
       .application {
         // margin-top: 83px;
-        width: 1178.04px;
-        height: 758px;
+        width: 1300px;
+        height: 822px;
         background-image: var(--applicationImage);
         background-size: cover;
         margin: 0 auto;
+        transition: all 0.4s;
       }
     }
   }
@@ -200,22 +193,6 @@ main {
 
   #download {
     margin-top: 140px;
-
-    .button {
-      box-sizing: border-box;
-      border: 2px solid var(--bgColor);
-      border-radius: 25px;
-      padding: 13px 24px;
-
-      &.small {
-        padding: 8px 18px;
-        border-radius: 18px;
-      }
-
-      &.download {
-        border: 2px solid $white;
-      }
-    }
 
     .downloadHeader {
       font-size: 76px;

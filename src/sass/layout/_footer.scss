@@ -1,4 +1,29 @@
 footer {
   margin-top: 120px;
   height: 541px;
+
+  .footer-logo {
+    background-image: var(--logoFooterImage);
+    background-size: 270px 160px;
+    width: 270px;
+    height: 160px;
+    transition: all 0.1s;
+    margin: 0 auto;
+  }
+
+  .social-links {
+    margin: 0 auto;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .copyright {
+    margin: 0 auto;
+    margin-top: 24px;
+    width: fit-content;
+  }
 }
