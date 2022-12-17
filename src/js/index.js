@@ -1,6 +1,16 @@
 import '../sass/index.scss';
 import './accordion-carousel';
 
+const body = document.querySelector('body');
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  body.classList.remove('light');
+  body.classList.add('dark');
+} else {
+  body.classList.remove('dark');
+  body.classList.add('light');
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // modify this later with localCache, local settings detection
   const checkbox = document.querySelector('li.switch');
