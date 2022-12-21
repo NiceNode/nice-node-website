@@ -1,0 +1,34 @@
+#support {
+  margin-top: 120px;
+  h3 {
+    margin-bottom: 32px;
+  }
+  p {
+    font-size: 48px;
+    line-height: 58px;
+
+    span {
+      background-size: cover;
+      display: inline-block;
+      background-repeat: no-repeat;
+
+      &.ethereumFoundation {
+        background-image: var(--ethereumFoundationImage);
+        width: 29px;
+        height: 48px;
+      }
+
+      &.gitcoinGrants {
+        background-image: var(--gitcoinGrantsImage);
+        width: 39px;
+        height: 48px;
+      }
+
+      &.cityDao {
+        background-image: var(--cityDaoImage);
+        width: 47px;
+        height: 48px;
+      }
+    }
+  }
+}

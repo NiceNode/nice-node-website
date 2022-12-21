@@ -1,0 +1,18 @@
+main {
+  padding-top: 94px;
+
+  .dynapuff {
+    font-family: 'DynaPuff';
+  }
+
+  section:not(:first-child) {
+    padding: 0px 48px;
+  }
+
+  section {
+    h3 {
+      font-size: 96px;
+      line-height: 110px;
+    }
+  }
+}

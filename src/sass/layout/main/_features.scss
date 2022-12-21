@@ -1,0 +1,88 @@
+#features {
+  margin-top: 160px;
+
+  /* Style for the accordion carousel container */
+  .accordion-carousel {
+    display: flex;
+    flex-direction: row;
+    margin-top: 89px;
+  }
+
+  /* Style for the accordion items */
+  .accordion-item {
+    width: 500px;
+    cursor: pointer;
+    margin-top: 24px;
+
+    &.active {
+      .accordion-headline {
+        color: var(--textColor)
+      }
+    }
+  }
+
+  /* Style for the accordion headlines */
+  .accordion-headline {
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--iconColor);
+    transition: all 0.3s;
+
+    &.pink {
+      &:hover {
+        color: var(--requirementsColor);
+      }
+    }
+
+    &.yellow {
+      &:hover {
+        color: var(--downloadColor);
+      }
+    }
+
+    &.orange {
+      &:hover {
+        color: var(--supportColor);
+      }
+    }
+
+    &.blue {
+      &:hover {
+        color: var(--faqColor);
+      }
+    }
+  }
+
+  /* Style for the accordion descriptions */
+  .accordion-description {
+    font-size: 16px;
+    margin-top: 24px;
+    line-height: 20px;
+  }
+
+  /* Style for the photo container */
+  .photoContainer {
+    width: 200px;
+    margin-left: 132px;
+  }
+
+  /* Style for the photos */
+  .photo {
+    width: 488px;
+  }
+
+  .timer-background {
+    margin-top:24px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--timerBackground);
+  }
+
+  /* Style for the timer bar */
+  .timer-bar {
+    width: 20%;
+    height: 2px;
+    background-color: var(--textColor);
+    transition: all 1s;
+  }
+}

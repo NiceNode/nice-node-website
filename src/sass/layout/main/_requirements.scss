@@ -1,0 +1,41 @@
+#requirements {
+  margin-top: 118px;
+  font-family: 'Satoshi-Bold';
+  font-size: 24px;
+  line-height: 30px;
+
+  .asteriskNote {
+    margin-top: 27px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .asteriskContainer {
+    margin-left:8px;
+  }
+
+  .asterisk {
+    width: 16.5px;
+    height: 16px;
+  }
+
+  .table {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  }
+  .table-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px 0px;
+    border-bottom: 2px solid var(--textColor);
+    align-self: stretch;
+    justify-content: space-between;
+  }
+  .table-cell {
+    width:33%;
+  }
+}
