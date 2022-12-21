@@ -2,8 +2,18 @@ import '../sass/index.scss';
 import './accordion-carousel';
 
 const body = document.querySelector('body');
+const savedTheme = localStorage.getItem('theme');
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+if (savedTheme){
+  const darkMode = savedTheme === 'dark';
+  if (darkMode){
+    body.classList.remove('light');
+    body.classList.add('dark');
+  } else {
+    body.classList.remove('dark');
+    body.classList.add('light');
+  }
+} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
   body.classList.remove('light');
   body.classList.add('dark');
 } else {
@@ -21,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextTheme = currentTheme === "light" ? "dark" : "light";
     body.classList.replace(currentTheme, nextTheme);
     currentTheme = nextTheme;
+
+    // Save the current theme in localStorage
+    localStorage.setItem('theme', currentTheme);
   });
 });
 
