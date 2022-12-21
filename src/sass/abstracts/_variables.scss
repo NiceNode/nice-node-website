@@ -59,6 +59,13 @@ $themes: (
   )
 );
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 390px,
+  md: 834px,
+  lg: 1440px,
+);
+
 @each $theme-name, $properties in $themes {
   body.#{$theme-name} {
     // define a css variable for each property
