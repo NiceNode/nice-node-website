@@ -10,8 +10,18 @@
     text-align: left;
     border: none;
     outline: none;
-    font-size: 40px;
-    line-height: 48px;
+    @include media-breakpoint-up(xs){
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @include media-breakpoint-up(sm){
+      font-size: 32px;
+      line-height: 38px;
+    }
+    @include media-breakpoint-up(md){
+      font-size: 40px;
+      line-height: 48px;
+    }
     border-bottom: 2px solid var(--textColor);
     transition: 0.4s;
 
@@ -56,6 +66,10 @@
     overflow: hidden;
     font-size: 24px;
     line-height: 30px;
+    @include media-breakpoint-up(xs){
+      font-size: 20px;
+      line-height: 24px;
+    }
     padding-bottom: 30px;
     border-bottom: 2px solid var(--textColor);
   }

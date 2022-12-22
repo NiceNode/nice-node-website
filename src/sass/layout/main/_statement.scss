@@ -1,12 +1,26 @@
 #statement {
   p {
-    font-size: 76px;
-    line-height: 91.2px;
+    @include media-breakpoint-up(xs){
+      font-size: 32px;
+      line-height: 38px;
+    }
+    @include media-breakpoint-up(sm){
+      font-size: 48px;
+      line-height: 58px;
+    }
+    @include media-breakpoint-up(md){
+      font-size: 76px;
+      line-height: 90px;
+    }
   }
 
   .learn {
     font-size: 32px;
-    line-height: 38.4px;
+    line-height: 38px;
+    @include media-breakpoint-up(xs){
+      font-size: 24px;
+      line-height: 30px;
+    }
     margin-top: 64px;
   }
 }
