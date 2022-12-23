@@ -22,6 +22,69 @@
     gap: 12px;
   }
 
+  .downloadTilesFallback {
+    margin-top: 72px;
+    display: none;
+    @media (pointer:coarse) {
+      display: flex;
+      justify-content: center;
+    }
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 48px;
+    background: $white40;
+    border-radius: 64px;
+  }
+
+  .fallbackContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    flex: none;
+    padding: 0px 0px 8px;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    .direction {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .availableForContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      gap: 12px;
+
+      font-size: 32px;
+      line-height: 38px;
+      @include media-breakpoint-up(sm){
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      .downloadIcon {
+        width: 38px;
+        height: 38px;
+        background-size: cover;
+        &.macOs {
+          background-image: url('../images/apple.png');
+        }
+        &.linux {
+          background-image: url('../images/linux.png');
+        }
+        &.windows {
+          background-image: url('../images/windows.png');
+        }
+      }
+    }
+  }
+
   .downloadTilesContainer {
     margin-top: 72px;
     display: flex;
@@ -29,6 +92,10 @@
     align-items: flex-start;
     padding: 0px;
     gap: 32px;
+
+    @media (pointer:coarse) {
+      display:none;  
+    }
 
     .downloadTile {
       color: $white;
@@ -49,8 +116,12 @@
 
       .downloadPlatform {
         margin-top: 24px;
-        font-size: 40px;
-        line-height: 48px;
+        font-size: 32px;
+        line-height: 38px;
+        @include media-breakpoint-up(sm){
+          font-size: 40px;
+          line-height: 48px;
+        }
       }
 
       .downloadType {
@@ -62,27 +133,28 @@
         width: 40px;
         height: 40px;
         padding: 0;
+        background-size: cover;
       }
 
       &.macOs {
         background: $orange;
 
         .downloadIcon {
-          background-image: url('../images/apple.svg');
+          background-image: url('../images/apple.png');
         }
       }
       &.windows {
         background: $blue;
 
         .downloadIcon {
-          background-image: url('../images/windows.svg');
+          background-image: url('../images/windows.png');
         }
       }
       &.linux {
         background: $purple;
 
         .downloadIcon {
-          background-image: url('../images/linux.svg');
+          background-image: url('../images/linux.png');
         }
       }
     }
