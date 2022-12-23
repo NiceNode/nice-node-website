@@ -63,9 +63,7 @@ header {
     font-size: 24px;
 
     .links {
-      @include media-breakpoint-up(xs){
-        display:none;
-      }
+      display:none;
       @include media-breakpoint-up(md){
         display:flex;
       }

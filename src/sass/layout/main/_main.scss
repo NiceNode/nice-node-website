@@ -11,10 +11,8 @@ main {
 
   section {
     h3 {
-      @include media-breakpoint-up(xs){
-        font-size: 48px;
-        line-height: 58px;
-      }
+      font-size: 48px;
+      line-height: 58px;
       @include media-breakpoint-up(sm){
         font-size: 60px;
         line-height: 72px;

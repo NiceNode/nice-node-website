@@ -1,9 +1,7 @@
 #statement {
   p {
-    @include media-breakpoint-up(xs){
-      font-size: 32px;
-      line-height: 38px;
-    }
+    font-size: 32px;
+    line-height: 38px;
     @include media-breakpoint-up(sm){
       font-size: 48px;
       line-height: 58px;
@@ -15,11 +13,11 @@
   }
 
   .learn {
-    font-size: 32px;
-    line-height: 38px;
-    @include media-breakpoint-up(xs){
-      font-size: 24px;
-      line-height: 30px;
+    font-size: 24px;
+    line-height: 30px;
+    @include media-breakpoint-up(sm){
+      font-size: 32px;
+      line-height: 38px;
     }
     margin-top: 64px;
   }
