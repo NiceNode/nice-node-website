@@ -1,5 +1,11 @@
 #faq {
-  margin-top: 120px;
+  margin-top: 72px;
+  @include media-breakpoint-up(sm){
+    margin-top: 96px;
+  }
+  @include media-breakpoint-up(md){
+    margin-top: 120px;
+  }
 
   .accordion {
     color: var(--textColor);

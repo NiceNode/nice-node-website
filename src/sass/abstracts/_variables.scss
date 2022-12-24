@@ -61,9 +61,9 @@ $themes: (
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 390px,
-  md: 834px,
-  lg: 1440px,
+  sm: 640px,
+  md: 1024px,
+  lg: 1400px,
 );
 
 @each $theme-name, $properties in $themes {

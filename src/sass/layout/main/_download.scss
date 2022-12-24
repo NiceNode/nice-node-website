@@ -1,5 +1,11 @@
 #download {
-  margin-top: 140px;
+  margin-top: 72px;
+  @include media-breakpoint-up(sm){
+    margin-top: 96px;
+  }
+  @include media-breakpoint-up(md){
+    margin-top: 135px;
+  }
 
   .downloadHeader {
     font-size: 48px;
@@ -63,10 +69,6 @@
 
       font-size: 32px;
       line-height: 38px;
-      @include media-breakpoint-up(sm){
-        font-size: 40px;
-        line-height: 48px;
-      }
 
       .downloadIcon {
         width: 38px;
@@ -92,6 +94,13 @@
     align-items: flex-start;
     padding: 0px;
     gap: 32px;
+    flex-wrap: wrap;
+    @include media-breakpoint-up(sm){
+      gap: 24px;
+    }
+    @include media-breakpoint-up(md){
+      flex-wrap: nowrap;
+    }
 
     @media (pointer:coarse) {
       display:none;  
@@ -103,9 +112,17 @@
       flex-direction: column;
       align-items: flex-start;
       padding: 56px;
-      border-radius: 100px;
-      width: 314px;
-      height: 244px;
+      border-radius: 48px;
+      width: 100%;
+      @include media-breakpoint-up(sm){
+        width: calc(44% - 24px - 48px);
+        height: 260px;
+        border-radius: 100px;
+      }
+      @include media-breakpoint-up(md){
+        width: 314px;
+        height: 244px;
+      }
 
       .divider {
         margin-top: 20px;
