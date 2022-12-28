@@ -1,5 +1,11 @@
 #top {
-  height: 1425px;
+  height: 100%;
+  @include media-breakpoint-up(sm){
+    height: 1425px;
+  }
+  @include media-breakpoint-up(md){
+    height: 1425px;
+  }
 
   .headerTextContainer {
     display: flex;
@@ -56,21 +62,35 @@
   }
 
   .graphic {
-    padding-top: 83px;
-    height: 959px;
     background-image: url('../images/Graphic.svg');
     text-align: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    // background-color: var(--textColor);
-    // -webkit-mask-size: cover;
-    // mask-size: cover;
-    // -webkit-mask-image: url('../images/Graphic.svg');
-    // mask-image: url('../images/Graphic.svg');
+
+    height: 260px;
+    @include media-breakpoint-up(sm){
+      background-size: cover;
+      padding-top: 83px;
+      height: 959px;
+    }
+    @include media-breakpoint-up(md){
+      padding-top: 83px;
+      height: 959px;
+      // background-size: cover;
+    }
 
     .application {
       // margin-top: 83px;
-      width: 1300px;
-      height: 822px;
+      width: 100%;
+      height: 100%;
+      @include media-breakpoint-up(sm){
+        width: 1300px;
+        height: 822px;
+      }
+      @include media-breakpoint-up(md){
+        width: 1300px;
+        height: 822px;
+      }
       background-image: var(--applicationImage);
       background-size: cover;
       margin: 0 auto;

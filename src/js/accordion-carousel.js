@@ -16,6 +16,7 @@ const photo1 = $('#photo-1');
 const photo2 = $('#photo-2');
 const photo3 = $('#photo-3');
 const photo4 = $('#photo-4');
+const photoContainer = $('#photoContainer');
 const timer1 = $('#timer-1');
 const timer2 = $('#timer-2');
 const timer3 = $('#timer-3');
@@ -90,6 +91,8 @@ function updateTimer() {
         timer2.css('display', 'none');
         timer3.css('display', 'none');
         timer4.css('display', 'none');
+        photoContainer.removeClass();
+        photoContainer.addClass('ui-01');
         break;
       case 2:
         timer1.css('width', '20%');
@@ -107,6 +110,8 @@ function updateTimer() {
         timer2.css('display', 'block');
         timer3.css('display', 'none');
         timer4.css('display', 'none');
+        photoContainer.removeClass();
+        photoContainer.addClass('ui-02');
         break;
       case 3:
         timer1.css('width', '20%');
@@ -124,6 +129,8 @@ function updateTimer() {
         timer2.css('display', 'none');
         timer3.css('display', 'block');
         timer4.css('display', 'none');
+        photoContainer.removeClass();
+        photoContainer.addClass('ui-03');
         break;
       case 4:
         timer1.css('width', '20%');
@@ -141,6 +148,8 @@ function updateTimer() {
         timer2.css('display', 'none');
         timer3.css('display', 'none');
         timer4.css('display', 'block');
+        photoContainer.removeClass();
+        photoContainer.addClass('ui-04');
         break;
     }
     manualChange = false;
@@ -172,6 +181,8 @@ function updateTimer() {
         timer2.css('display', 'none');
         timer3.css('display', 'none');
         timer4.css('display', 'none');
+        photoContainer.removeClass();
+        photoContainer.addClass('ui-01');
         break;
       case 2:
         timer1.css('width', '20%');
@@ -190,6 +201,8 @@ function updateTimer() {
         timer2.css('display', 'block');
         timer3.css('display', 'none');
         timer4.css('display', 'none');
+        photoContainer.removeClass();
+        photoContainer.addClass('ui-02');
         break;
       case 3:
         timer1.css('width', '20%');
@@ -208,6 +221,8 @@ function updateTimer() {
         timer2.css('display', 'none');
         timer3.css('display', 'block');
         timer4.css('display', 'none');
+        photoContainer.removeClass();
+        photoContainer.addClass('ui-03');
         break;
       case 4:
         timer1.css('width', '20%');
@@ -226,6 +241,8 @@ function updateTimer() {
         timer2.css('display', 'none');
         timer3.css('display', 'none');
         timer4.css('display', 'block');
+        photoContainer.removeClass();
+        photoContainer.addClass('ui-04');
         break;
     }
 
@@ -249,6 +266,8 @@ function updateTimer() {
       timer2.css('display', 'none');
       timer3.css('display', 'none');
       timer4.css('display', 'none');
+      photoContainer.removeClass();
+      photoContainer.addClass('ui-01');
     }
 
     // Set active state on the next item

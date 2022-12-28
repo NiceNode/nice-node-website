@@ -61,14 +61,34 @@
   }
 
   /* Style for the photo container */
-  .photoContainer {
-    width: 200px;
+  #photoContainer {
+    width: 100%;
     margin-left: 132px;
+    background-color: var(--bgColor);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    &.ui-01 {
+      background-image: url('../images/feature-01.svg');
+    }
+
+    &.ui-02 {
+      background-image: url('../images/feature-02.svg');
+    }
+
+    &.ui-03 {
+      background-image: url('../images/feature-03.svg');
+    }
+
+    &.ui-04 {
+      background-image: url('../images/feature-04.svg');
+    }
   }
 
   /* Style for the photos */
   .photo {
-    width: 488px;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .timer-background {

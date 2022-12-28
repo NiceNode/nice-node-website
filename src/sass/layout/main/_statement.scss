@@ -1,4 +1,12 @@
 #statement {
+  margin-top: 56px;
+  @include media-breakpoint-up(sm){
+    margin-top: 40px;
+  }
+  @include media-breakpoint-up(md){
+    margin-top: 18px;
+  }
+
   p {
     font-size: 32px;
     line-height: 38px;
