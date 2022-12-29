@@ -1,16 +1,36 @@
 #features {
   margin-top: 160px;
 
+  .carousel {
+    margin-top: 16px;
+    @include media-breakpoint-up(sm){
+      margin-top: 32px;
+    }
+    @include media-breakpoint-up(md){
+      margin-top: 16px;
+    }
+  }
+
+  .accordionContainer {
+    width:100%;
+    order: 1;
+    @include media-breakpoint-up(md){
+      width: 50%;
+      order: 0;
+    }
+  }
+
   /* Style for the accordion carousel container */
   .accordion-carousel {
     display: flex;
-    flex-direction: row;
-    margin-top: 89px;
+    flex-direction: column;
+    @include media-breakpoint-up(md){
+      flex-direction: row;
+    }
   }
 
   /* Style for the accordion items */
   .accordion-item {
-    width: 500px;
     cursor: pointer;
     margin-top: 24px;
 
@@ -63,10 +83,21 @@
   /* Style for the photo container */
   #photoContainer {
     width: 100%;
-    margin-left: 132px;
+    order: 0;
+    background-position: center;
+    @include media-breakpoint-up(sm){
+      height: 445px;
+    }
+    @include media-breakpoint-up(md){
+      width: 50%;
+      order: 1;
+      margin-left: 32px;
+      height:auto;
+    }
     background-color: var(--bgColor);
     background-size: contain;
     background-repeat: no-repeat;
+    transition: all 0.4s;
     
     &.ui-01 {
       background-image: url('../images/feature-01.svg');
@@ -88,6 +119,13 @@
   /* Style for the photos */
   .photo {
     width: 80%;
+    @include media-breakpoint-up(sm){
+      width: 410px;
+    }
+    @include media-breakpoint-up(md){
+      width: 80%;
+      min-width: 410px;
+    }
     margin: 0 auto;
   }
 
