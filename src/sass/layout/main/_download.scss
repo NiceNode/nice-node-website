@@ -89,39 +89,48 @@
 
   .downloadTilesContainer {
     margin-top: 72px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     padding: 0px;
-    gap: 32px;
-    flex-wrap: wrap;
-    @include media-breakpoint-up(sm){
-      gap: 24px;
-    }
-    @include media-breakpoint-up(md){
-      flex-wrap: nowrap;
-    }
 
     @media (pointer:coarse) {
       display:none;  
     }
 
     .downloadTile {
+      &:first-child {
+        @include media-breakpoint-up(sm){
+          margin-right: 24px;
+          margin-bottom: 24px;
+        }
+        @include media-breakpoint-up(md){
+          margin-right: 32px;
+          margin-bottom: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        @include media-breakpoint-up(md){
+          margin-right: 0px;
+        }
+      }
       color: $white;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 56px;
+      padding: 32px;
       border-radius: 48px;
       width: 100%;
+      display: block;
+      box-sizing: border-box;
+      margin-bottom:24px;
       @include media-breakpoint-up(sm){
-        width: calc(44% - 24px - 48px);
-        height: 260px;
+        width: calc(50% - 15px);
+        padding: 56px;
+        height: unset;
+        display: inline-block;
         border-radius: 100px;
+        margin-bottom:0px;
       }
       @include media-breakpoint-up(md){
-        width: 314px;
-        height: 244px;
+        width: calc(33.3333% - 25px);
+        margin-bottom: 0px;
+        margin-right: 32px;
       }
 
       .divider {
@@ -144,6 +153,12 @@
       .downloadType {
         font-size: 20px;
         line-height: 24px;
+
+        &.apple {
+          @include media-breakpoint-up(sm){
+            font-size: 16px;
+          }
+        }
       }
 
       .downloadIcon {
