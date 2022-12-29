@@ -7,6 +7,7 @@ header {
   align-items: center;
   padding: 16px;
   height: 62px;
+  z-index: 1;
   @include media-breakpoint-up(sm){
     padding: 16px 24px;
   }
@@ -40,7 +41,7 @@ header {
 
     .icons {
       li {
-        width: 26px;
+        width: 28px;
         height: 26px;
       }
     }
@@ -166,7 +167,7 @@ header {
       -webkit-mask-size: cover;
       mask-size: cover;
       width: 45px;
-      height: 45px;
+      height: 30px;
       cursor: pointer;
 
       &:hover {

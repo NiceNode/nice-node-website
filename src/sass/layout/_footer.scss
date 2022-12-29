@@ -1,12 +1,18 @@
 footer {
   margin-top: 80px;
+  height: 418px;
   @include media-breakpoint-up(sm){
     margin-top: 96px;
+    height: 495px;
   }
   @include media-breakpoint-up(md){
     margin-top: 120px;
+    height: 541px;
   }
-  height: 541px;
+  background-image: url(../images/footer.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   .footer-logo {
     background-image: var(--logoFooterImage);
