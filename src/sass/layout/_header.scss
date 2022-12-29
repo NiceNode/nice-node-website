@@ -20,17 +20,25 @@ header {
   transition: all 0.4s;
 
   &.minimized {
-    padding: 16px 48px;
+    padding: 16px;
+    @include media-breakpoint-up(sm){
+      padding: 16px 24px;
+    }
+    @include media-breakpoint-up(md){
+      padding: 16px 48px;
+    }
     height: 62px;
     position: sticky;
     background-color: var(--bgMinimized);
     backdrop-filter: blur(30px);
 
     .logo {
-      width: 132px;
-      height: 30px;
-      background-size: 132px 30px;
-      background-image: var(--logoMinimizedImage);
+      @include media-breakpoint-up(md){
+        width: 132px;
+        height: 30px;
+        background-size: 132px 30px;
+        background-image: var(--logoMinimizedImage);
+      }
     }
 
     nav {
@@ -49,10 +57,19 @@ header {
   }
 
   .logo {
-    background-image: var(--logoImage);
-    background-size: 152px 32px;
-    width: 152px;
-    height: 32px;
+    background-image: var(--logoMobileImage);
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    @include media-breakpoint-up(sm){
+      background-image: var(--logoImage);
+      background-size: 152px 32px;
+      width: 152px;
+      height: 32px;
+    }
+    @include media-breakpoint-up(md){
+      // padding: 16px 48px;
+    }
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -166,8 +183,12 @@ header {
       background-color: var(--textColor);
       -webkit-mask-size: cover;
       mask-size: cover;
-      width: 45px;
-      height: 30px;
+      width: 28px;
+      height: 26px;
+      @include media-breakpoint-up(md){
+        width: 45px;
+        height: 30px;
+      }
       cursor: pointer;
 
       &:hover {

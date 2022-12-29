@@ -1,5 +1,11 @@
 #features {
-  margin-top: 160px;
+  margin-top: 72px;
+  @include media-breakpoint-up(sm){
+    margin-top: 96px;
+  }
+  @include media-breakpoint-up(md){
+    margin-top: 160px;
+  }
 
   .carousel {
     margin-top: 16px;

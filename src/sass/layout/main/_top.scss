@@ -1,7 +1,6 @@
 #top {
   height: 100%;
   @include media-breakpoint-up(sm){
-    height: 1425px;
   }
   @include media-breakpoint-up(md){
     height: 1425px;
@@ -62,20 +61,22 @@
   }
 
   .graphic {
-    background-image: url('../images/Graphic.svg');
+    background-image: url('../images/header.svg');
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    height: 260px;
+    background-position: center;
+    height: 316px;
     @include media-breakpoint-up(sm){
       background-size: cover;
-      padding-top: 83px;
-      height: 959px;
+      padding-top: 0px;
+      height: 555px;
     }
     @include media-breakpoint-up(md){
       padding-top: 83px;
       height: 959px;
+      background-size: cover;
+      background-position: center;
       // background-size: cover;
     }
 
@@ -83,16 +84,19 @@
       // margin-top: 83px;
       width: 100%;
       height: 100%;
+      background-position: center;
       @include media-breakpoint-up(sm){
-        width: 1300px;
-        height: 822px;
+        // width: 100%;
       }
       @include media-breakpoint-up(md){
-        width: 1300px;
-        height: 822px;
+        width: 100%;
+        height: 100%;
+        max-width: 1300px;
+        max-height: 822px;
       }
       background-image: var(--applicationImage);
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
       margin: 0 auto;
       transition: all 0.4s;
     }
