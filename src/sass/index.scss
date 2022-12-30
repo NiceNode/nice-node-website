@@ -31,25 +31,31 @@ body {
   }
 }
 
-.button {
-  box-sizing: border-box;
+.downloadButton {
+  margin-top: 32px;
+  position: relative;
   border: 2px solid var(--textColor);
   border-radius: 25px;
-  padding: 13px 24px;
   background-color: none;
   color: var(--textColor);
   cursor: pointer;
   text-decoration: none;
   transition: all 0.4s;
+  overflow: hidden;
+  width: fit-content;
 
-  &.downloadButton {
-    margin-top: 32px;
-    border: 2px solid $white;
+  &.orange, a {
+    box-sizing: border-box;
+    padding: 13px 24px;
+    width: fit-content;
+    height: 100%;
+    display: inline-block;
+    text-decoration: none;
+    overflow:visible;
     color: $white;
-
+    // border-radius: 25px;
     &.active, &:hover {
       background-color: $white;
-
       &.orange {
         color: $orange;
       }
@@ -60,17 +66,19 @@ body {
         color: $purple;
       }
     }
-
-    &.active {
-      background-color: $white;
-      color: rgba(0, 0, 0, 0);
-    }
-
-    &:hover {
-      background-color: $white;
-      color: rgba(0, 0, 0, 0);
-    }
   }
+}
+
+.button {
+  box-sizing: border-box;
+  border: 2px solid var(--textColor);
+  border-radius: 25px;
+  padding: 13px 24px;
+  background-color: none;
+  color: var(--textColor);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s;
 
   &.active {
     background-color: var(--textColor);

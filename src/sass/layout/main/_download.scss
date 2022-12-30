@@ -123,7 +123,7 @@
         width: calc(50% - 15px);
         padding: 56px;
         height: unset;
-        display: inline-block;
+        display: inline-table;
         border-radius: 100px;
         margin-bottom:0px;
       }
@@ -158,6 +158,9 @@
           @include media-breakpoint-up(sm){
             font-size: 16px;
           }
+          @include media-breakpoint-up(md){
+            font-size: 20px;
+          }
         }
       }
 
@@ -187,6 +190,33 @@
 
         .downloadIcon {
           background-image: url('../images/linux.png');
+        }
+      }
+
+      .downloadMenu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        width: max-content;
+        position: absolute;
+        margin-top: 20px;
+        left: 0;
+
+        &.visible {
+          display: flex;
+        }
+
+        .downloadText {
+          a {
+            color: var(--bgColor);
+            &:hover {
+              color: $orange;
+            }
+          }
         }
       }
     }

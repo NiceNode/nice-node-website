@@ -1,5 +1,6 @@
 import '../sass/index.scss';
 import './accordion-carousel';
+import $ from 'jquery';
 
 const body = document.querySelector('body');
 const savedTheme = localStorage.getItem('theme');
@@ -71,3 +72,12 @@ window.addEventListener('scroll', function() {
   }
 });
 
+$(".downloadButton.orange").click(function() {
+  $(".downloadMenu").toggleClass('visible');
+});
+
+$(document).click(function(event) {
+  if (!$(event.target).hasClass('downloadButton orange')) {
+    $(".downloadMenu").removeClass('visible');
+  }
+});
