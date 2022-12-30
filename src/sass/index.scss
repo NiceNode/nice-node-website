@@ -31,44 +31,6 @@ body {
   }
 }
 
-.downloadButton {
-  margin-top: 32px;
-  position: relative;
-  border: 2px solid var(--textColor);
-  border-radius: 25px;
-  background-color: none;
-  color: var(--textColor);
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.4s;
-  overflow: hidden;
-  width: fit-content;
-
-  &.orange, a {
-    box-sizing: border-box;
-    padding: 13px 24px;
-    width: fit-content;
-    height: 100%;
-    display: inline-block;
-    text-decoration: none;
-    overflow:visible;
-    color: $white;
-    // border-radius: 25px;
-    &.active, &:hover {
-      background-color: $white;
-      &.orange {
-        color: $orange;
-      }
-      &.blue {
-        color: $blue;
-      }
-      &.purple {
-        color: $purple;
-      }
-    }
-  }
-}
-
 .button {
   box-sizing: border-box;
   border: 2px solid var(--textColor);

@@ -193,6 +193,43 @@
         }
       }
 
+      .downloadButton {
+        margin-top: 32px;
+        position: relative;
+        border: 2px solid $white;
+        border-radius: 25px;
+        background-color: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.4s;
+        overflow: hidden;
+        width: fit-content;
+      
+        &.orange, a {
+          box-sizing: border-box;
+          padding: 13px 24px;
+          width: fit-content;
+          height: 100%;
+          display: inline-block;
+          text-decoration: none;
+          overflow:visible;
+          color: $white;
+          // border-radius: 25px;
+          &.active, &:hover {
+            background-color: $white;
+            &.orange {
+              color: $orange;
+            }
+            &.blue {
+              color: $blue;
+            }
+            &.purple {
+              color: $purple;
+            }
+          }
+        }
+      }
+
       .downloadMenu {
         display: none;
         flex-direction: column;
@@ -212,7 +249,7 @@
 
         .downloadText {
           a {
-            color: var(--bgColor);
+            color: $black;
             &:hover {
               color: $orange;
             }
