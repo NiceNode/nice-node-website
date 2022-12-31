@@ -3,7 +3,7 @@
   @include media-breakpoint-up(sm){
   }
   @include media-breakpoint-up(md){
-    height: 1254px;
+    height: 1381px;
   }
 
   .headerTextContainer {
@@ -61,7 +61,7 @@
   }
 
   .graphic {
-    background-image: url('../images/header.svg');
+    background-image: var(--headerImage);
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;

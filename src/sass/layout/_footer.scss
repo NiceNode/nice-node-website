@@ -9,7 +9,7 @@ footer {
     margin-top: 120px;
     height: 541px;
   }
-  background-image: url(../images/footer.svg);
+  background-image: var(--footerImage);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
