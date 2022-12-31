@@ -16,9 +16,21 @@ footer {
 
   .footer-logo {
     background-image: var(--logoFooterImage);
-    background-size: 270px 160px;
-    width: 270px;
-    height: 160px;
+    background-size: 180px 128px;
+    width: 180px;
+    height: 128px;
+    @include media-breakpoint-up(sm){
+      background-image: var(--logoFooterImage);
+      background-size: 216px 146px;
+      width: 216px;
+      height: 146px;
+    }
+    @include media-breakpoint-up(md){
+      background-image: var(--logoFooterImage);
+      background-size: 270px 160px;
+      width: 270px;
+      height: 160px;
+    }
     transition: all 0.1s;
     margin: 0 auto;
   }

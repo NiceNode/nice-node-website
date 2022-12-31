@@ -77,7 +77,8 @@ $(".downloadButton.orange").click(function() {
 });
 
 $(document).click(function(event) {
-  if (!$(event.target).hasClass('downloadButton orange')) {
+  console.log($(event.target).hasClass('downloadContainer'));
+  if (!($(event.target).hasClass('downloadContainer') || $(event.target).hasClass('downloadButton orange') || $(event.target).hasClass('down'))) {
     $(".downloadMenu").removeClass('visible');
   }
 });

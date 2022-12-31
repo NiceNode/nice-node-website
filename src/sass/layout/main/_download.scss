@@ -42,6 +42,22 @@
     border-radius: 64px;
   }
 
+  .downloadContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .down {
+    width: 26px;
+    height: 26px;
+    -webkit-mask-image: url('../images/down.svg');
+    mask-image: url('../images/down.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: white;
+  }
+
   .fallbackContent {
     display: flex;
     flex-direction: column;
@@ -204,6 +220,10 @@
         transition: all 0.4s;
         overflow: hidden;
         width: fit-content;
+        font-size: 20px;
+        @include media-breakpoint-up(sm){
+          font-size: 24px;
+        }
       
         &.orange, a {
           box-sizing: border-box;
@@ -218,6 +238,10 @@
           // border-radius: 25px;
           &.active, &:hover {
             background-color: $white;
+            .down {
+              background-color: $orange;
+              transition: all 0.5s;
+            }
             &.orange {
               color: $orange;
             }
