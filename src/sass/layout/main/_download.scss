@@ -56,6 +56,10 @@
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: white;
+    margin-left:6px;
+    @include media-breakpoint-up(sm){
+      margin-left:8px;
+    }
   }
 
   .fallbackContent {
