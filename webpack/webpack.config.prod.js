@@ -1,9 +1,13 @@
+const Path = require('path');
 const Webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
+  entry: {
+    app: Path.resolve(__dirname, '../src/js/index.js'),
+  },
   mode: 'production',
   devtool: 'source-map',
   stats: 'errors-only',
