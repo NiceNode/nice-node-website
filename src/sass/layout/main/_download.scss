@@ -38,7 +38,8 @@
     flex-direction: row;
     align-items: flex-start;
     padding: 48px;
-    background: $white40;
+    color: $white;
+    background: var(--timerBackground);
     border-radius: 64px;
   }
 
@@ -67,28 +68,38 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px;
     gap: 24px;
     flex: none;
     padding: 0px 0px 8px;
-    order: 0;
     align-self: stretch;
     flex-grow: 0;
+    width: 100%;
 
     .direction {
       font-size: 20px;
       line-height: 24px;
+      text-align:center;
     }
 
     .availableForContainer {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      @include media-breakpoint-up(sm){
+        flex-direction: row;
+      }
       align-items: center;
       padding: 0px;
       gap: 12px;
 
       font-size: 32px;
       line-height: 38px;
+
+      .icons {
+        gap: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
 
       .downloadIcon {
         width: 38px;

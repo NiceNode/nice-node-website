@@ -25,6 +25,7 @@
       background-size: cover;
       display: inline-block;
       background-repeat: no-repeat;
+      margin-bottom: -4px;
 
       &.ethereumFoundation {
         background-image: var(--ethereumFoundationImage);
