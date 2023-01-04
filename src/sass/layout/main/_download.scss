@@ -23,8 +23,12 @@
   .releaseContainer {
     margin-top: 34px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    @include media-breakpoint-up(sm){
+      flex-direction: row;
+      align-items: center;
+    }
     gap: 12px;
   }
 
@@ -190,6 +194,9 @@
             font-size: 16px;
           }
           @include media-breakpoint-up(md){
+            font-size: 16px;
+          }
+          @include media-breakpoint-up(mdlg){
             font-size: 20px;
           }
         }

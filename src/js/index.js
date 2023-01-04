@@ -81,7 +81,6 @@ $(".downloadButton.orange").click(function() {
 });
 
 $(document).click(function(event) {
-  console.log($(event.target).hasClass('downloadContainer'));
   if (!($(event.target).hasClass('downloadContainer') || $(event.target).hasClass('downloadButton orange') || $(event.target).hasClass('down'))) {
     $(".downloadMenu").removeClass('visible');
   }
