@@ -226,6 +226,15 @@
         width: fit-content;
         font-size: 20px;
         @include media-breakpoint-up(sm){
+          font-size: 18px;
+        }
+        @include media-breakpoint-up(smmd){
+          font-size: 24px;
+        }
+        @include media-breakpoint-up(md){
+          font-size: 18px;
+        }
+        @include media-breakpoint-up(mdlg){
           font-size: 24px;
         }
       
