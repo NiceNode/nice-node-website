@@ -47,8 +47,12 @@ for (i = 0; i < acc.length; i++) {
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
+      this.querySelector("span.dot").innerHTML = "●";
+      this.querySelector("span.arrow").innerHTML = "↓";
     } else {
       panel.style.display = "block";
+      this.querySelector("span.dot").innerHTML = "○";
+      this.querySelector("span.arrow").innerHTML = "↑";
     }
   });
 }

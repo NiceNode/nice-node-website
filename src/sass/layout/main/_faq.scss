@@ -8,6 +8,7 @@
   }
 
   .accordion {
+    display:flex;
     color: var(--textColor);
     background-color: transparent;
     cursor: pointer;
@@ -18,6 +19,8 @@
     outline: none;
     font-size: 24px;
     line-height: 30px;
+    font-family: 'Satoshi-Medium';
+    font-style: normal;
     @include media-breakpoint-up(sm){
       font-size: 32px;
       line-height: 38px;
@@ -25,9 +28,18 @@
     @include media-breakpoint-up(md){
       font-size: 40px;
       line-height: 48px;
+      font-weight: 500;
     }
     border-bottom: 2px solid var(--textColor);
     transition: all 0.4s;
+
+    .question {
+      margin-left: 24px;
+    }
+
+    .spacer {
+      flex-grow: 1;
+    }
 
     &.pink {
       &:hover {
