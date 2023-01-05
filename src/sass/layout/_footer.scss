@@ -14,25 +14,42 @@ footer {
   background-repeat: no-repeat;
   background-size: contain;
 
-  .footer-logo {
-    background-image: var(--logoFooterImage);
-    background-size: 180px 128px;
-    width: 180px;
-    height: 128px;
-    @include media-breakpoint-up(sm){
-      background-image: var(--logoFooterImage);
-      background-size: 216px 146px;
-      width: 216px;
-      height: 146px;
+  .logoContainer {
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      margin: 0 auto;
+      background-image: var(--logoMobileImage);
+      background-size: 64px 64px;
+      width: 64px;
+      height: 64px;
+      @include media-breakpoint-up(sm){
+        background-image: var(--logoMobileImage);
+        background-size: 72px 72px;
+        width: 72px;
+        height: 72px;
+      }
+      transition: all 0.1s;
     }
-    @include media-breakpoint-up(md){
-      background-image: var(--logoFooterImage);
-      background-size: 270px 160px;
-      width: 270px;
-      height: 160px;
+
+    .text {
+      margin-top: 16px;
+      font-family: 'Satoshi-Medium';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      @include media-breakpoint-up(sm){
+        font-size: 48px;
+        line-height: 58px;
+      }
+      @include media-breakpoint-up(md){
+        font-size: 60px;
+        line-height: 72px;
+      }
     }
-    transition: all 0.1s;
-    margin: 0 auto;
   }
 
   .social-links {
