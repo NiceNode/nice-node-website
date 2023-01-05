@@ -22,6 +22,9 @@ const timer2 = $('#timer-2');
 const timer3 = $('#timer-3');
 const timer4 = $('#timer-4');
 
+const leftArrow = $('#left-arrow');
+const rightArrow = $('#right-arrow');
+
 // Create a variable to track the remaining time on the timer
 let timeRemaining = timerLength;
 
@@ -303,6 +306,44 @@ const reset = (item) => {
     updateTimer();
   }, 1000);
 };
+
+// When the left arrow is clicked, we want to move to the previous item
+leftArrow.click(() => {
+  // Set the manual change variable to true
+  manualChange = true;
+
+  // Decrement the current item
+  currentItem--;
+
+  // If we have reached the first item, we want to start over at the last item
+  if (currentItem < 1) {
+    currentItem = 4;
+  }
+
+  timeRemaining = 6;
+
+  // Set the active state on the current item
+  setActiveClass();
+});
+
+// When the right arrow is clicked, we want to move to the next item
+rightArrow.click(() => {
+  // Set the manual change variable to true
+  manualChange = true;
+
+  // Increment the current item
+  currentItem++;
+
+  // If we have reached the last item, we want to start over at the first item
+  if (currentItem > 4) {
+    currentItem = 1;
+  }
+
+  timeRemaining = 6;
+
+  // Set the active state on the current item
+  setActiveClass();
+});
 
 // Set up event listeners for the accordion items
 accordion1.on('click', ()=> reset(1));
