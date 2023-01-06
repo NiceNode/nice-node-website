@@ -146,24 +146,57 @@
   }
 
   .left-arrow, .right-arrow {
+    box-sizing: border-box;
     position: absolute;
+    border: 2px solid var(--textColor);
+    border-radius: 25px;
+    width: 56px;
+    height: 56px;
+    padding: 15px;
     top: 50%;
+    background-color: none;
+    color: var(--textColor);
     transform: translateY(-50%);
-    font-size: 2rem;
-    color: white;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s;
     @include media-breakpoint-up(md){
       display:none;
+    }
+
+    div {
+      width: 24px;
+      height: 24px;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      mask-position: center;
+      background-color: var(--textColor);
+    }
+
+    &.active, &:hover {
+      background-color: var(--textColor);
+      .left, .right {
+        background-color: var(--bgColor);
+        transition: all 0.5s;
+      }
     }
   }
 
   .left-arrow {
     left: 5%;
+
+    .left {
+      -webkit-mask-image: url('../images/left.svg');
+      mask-image: url('../images/left.svg');
+    }
   }
 
   .right-arrow {
     right: 5%;
+
+    .right {
+      -webkit-mask-image: url('../images/right.svg');
+      mask-image: url('../images/right.svg');
+    }
   }
 
   .timer-background {
