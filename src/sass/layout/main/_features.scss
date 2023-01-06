@@ -182,7 +182,10 @@
   }
 
   .left-arrow {
-    left: 5%;
+    left: 2%;
+    @include media-breakpoint-up(sm){
+      left: 5%;
+    }
 
     .left {
       -webkit-mask-image: url('../images/left.svg');
@@ -191,7 +194,10 @@
   }
 
   .right-arrow {
-    right: 5%;
+    right: 2%;
+    @include media-breakpoint-up(sm){
+      right: 5%;
+    }
 
     .right {
       -webkit-mask-image: url('../images/right.svg');
