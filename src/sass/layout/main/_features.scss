@@ -167,10 +167,27 @@
   }
 
   .timer-background {
+    display:none;
+    @include media-breakpoint-up(md){
+      display:block;
+    }
     margin-top:24px;
     height: 2px;
     width: 100%;
     background-color: var(--timerBackground);
+  }
+
+  .responsiveTimer {
+    display: flex;
+    flex-direction: row;
+    gap: 7.5px;
+    @include media-breakpoint-up(md){
+      display:none;
+    }
+    .timer-background {
+      display: flex;
+      width: 25%;
+    }
   }
 
   /* Style for the timer bar */

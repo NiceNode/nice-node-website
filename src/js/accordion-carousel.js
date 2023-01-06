@@ -17,10 +17,10 @@ const photo2 = $('#photo-2');
 const photo3 = $('#photo-3');
 const photo4 = $('#photo-4');
 const photoContainer = $('#photoContainer');
-const timer1 = $('#timer-1');
-const timer2 = $('#timer-2');
-const timer3 = $('#timer-3');
-const timer4 = $('#timer-4');
+const timer1 = $('.timer-1');
+const timer2 = $('.timer-2');
+const timer3 = $('.timer-3');
+const timer4 = $('.timer-4');
 
 const leftArrow = $('#left-arrow');
 const rightArrow = $('#right-arrow');
@@ -309,9 +309,6 @@ const reset = (item) => {
 
 // When the left arrow is clicked, we want to move to the previous item
 leftArrow.click(() => {
-  // Set the manual change variable to true
-  manualChange = true;
-
   // Decrement the current item
   currentItem--;
 
@@ -320,17 +317,11 @@ leftArrow.click(() => {
     currentItem = 4;
   }
 
-  timeRemaining = 6;
-
-  // Set the active state on the current item
-  setActiveClass();
+  reset(currentItem);
 });
 
 // When the right arrow is clicked, we want to move to the next item
 rightArrow.click(() => {
-  // Set the manual change variable to true
-  manualChange = true;
-
   // Increment the current item
   currentItem++;
 
@@ -339,11 +330,39 @@ rightArrow.click(() => {
     currentItem = 1;
   }
 
-  timeRemaining = 6;
-
-  // Set the active state on the current item
-  setActiveClass();
+  reset(currentItem);
 });
+
+// // When the user touches the photo container, we want to move to the next or previous item
+// photoContainer.on('touchmove', (event) => {
+//   // Get the touch position
+//   const touchPosition = event.originalEvent.touches[0].clientX;
+
+//   // Get the width of the photo container
+//   const containerWidth = photoContainer.width();
+
+//   // If the touch position is on the left half of the photo container, we want to move to the previous item
+//   if (touchPosition < containerWidth / 2) {
+//     // Decrement the current item
+//     currentItem--;
+
+//     // If we have reached the first item, we want to start over at the last item
+//     if (currentItem < 1) {
+//       currentItem = 4;
+//     }
+//   }
+//   // If the touch position is on the right half of the photo container, we want to move to the next item
+//   else {
+//     // Increment the current item
+//     currentItem++;
+
+//     // If we have reached the last item, we want to start over at the first item
+//     if (currentItem > 4) {
+//       currentItem = 1;
+//     }
+//   }
+//   reset(currentItem);
+// });
 
 // Set up event listeners for the accordion items
 accordion1.on('click', ()=> reset(1));
