@@ -30,6 +30,10 @@
       align-items: center;
     }
     gap: 12px;
+
+    .releaseVersion {
+      cursor: default;
+    }
   }
 
   .downloadTilesFallback {

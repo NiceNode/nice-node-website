@@ -64,26 +64,34 @@
     transition: all 0.3s;
 
     &.pink {
-      &:hover {
-        color: var(--requirementsColor);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--requirementsColor);
+        }
       }
     }
 
     &.yellow {
-      &:hover {
-        color: var(--downloadColor);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--downloadColor);
+        }
       }
     }
 
     &.orange {
-      &:hover {
-        color: var(--supportColor);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--supportColor);
+        }
       }
     }
 
     &.blue {
-      &:hover {
-        color: var(--faqColor);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--faqColor);
+        }
       }
     }
   }
@@ -172,11 +180,21 @@
       background-color: var(--textColor);
     }
 
-    &.active, &:hover {
+    &.active {
       background-color: var(--textColor);
       .left, .right {
         background-color: var(--bgColor);
         transition: all 0.5s;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--textColor);
+        .left, .right {
+          background-color: var(--bgColor);
+          transition: all 0.5s;
+        }
       }
     }
   }
@@ -234,6 +252,6 @@
     width: 20%;
     height: 2px;
     background-color: var(--textColor);
-    transition: all 1s;
+    transition: linear 1s;
   }
 }

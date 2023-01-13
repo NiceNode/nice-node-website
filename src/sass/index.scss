@@ -21,13 +21,17 @@ body {
   color: var(--textColor);
   font-family: 'Satoshi-Medium';
   transition: all 0.4s;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .link {
   color: var(--textColor);
   transition: all 0.4s;
-  &:hover {
-    color: var(--iconColor);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--iconColor);
+    }
   }
 }
 
@@ -47,9 +51,11 @@ body {
     color: var(--bgColor);
   }
 
-  &:hover {
-    background-color: var(--textColor);
-    color: var(--bgColor);
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--textColor);
+      color: var(--bgColor);
+    }
   }
 
   &.small {

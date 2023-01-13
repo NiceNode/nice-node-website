@@ -46,32 +46,42 @@
     }
 
     &.pink {
-      &:hover {
-        color: $pink1;
+      @media (hover: hover) {
+        &:hover {
+          color: $pink1;
+        }
       }
     }
 
     &.yellow {
-      &:hover {
-        color: $yellow;
+      @media (hover: hover) {
+        &:hover {
+          color: $yellow;
+        }
       }
     }
 
     &.orange {
-      &:hover {
-        color: $orange;
+      @media (hover: hover) {
+        &:hover {
+          color: $orange;
+        }
       }
     }
 
     &.blue {
-      &:hover {
-        color: $blue;
+      @media (hover: hover) {
+        &:hover {
+          color: $blue;
+        }
       }
     }
 
     &.purple {
-      &:hover {
-        color: $purple;
+      @media (hover: hover) {
+        &:hover {
+          color: $purple;
+        }
       }
     }
   }

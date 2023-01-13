@@ -61,7 +61,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
+      const element = document.querySelector(this.getAttribute('href'));
+      const elementPosition = element.getBoundingClientRect().top;
+      window.scrollBy({
+          top: elementPosition - 62,
           behavior: 'smooth'
       });
   });
