@@ -101,5 +101,12 @@
     }
     padding-bottom: 30px;
     border-bottom: 2px solid var(--textColor);
+
+    ol {
+      margin-top: 15px;
+      li {
+        list-style: inside;
+      }
+    }
   }
 }

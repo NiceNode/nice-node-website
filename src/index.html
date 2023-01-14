@@ -43,7 +43,9 @@
         <h2 class="header">Set up an Ethereum node in no-time on every modern computer without any technical knowledge.</div>
       </div>
       <div class="graphic">
-        <div class="application"></div>
+        <div class="application">
+          <div class="comingSoon"></div>
+        </div>
       </div>
     </section>
     <section id="statement">
@@ -154,8 +156,8 @@
     <section id="download">
       <h3 class="downloadHeader">Run a node and become part of a global revolution.</h3>
       <div class="releaseContainer">
-        <div class="button active releaseVersion">Version v1.5.1-alpha</div>
-        <a class="button" href="https://github.com/jgresham/nice-node/releases" target="_blank" rel="noopener noreferrer">Release Notes</a>
+        <div class="button small active releaseVersion">Alpha in development</div>
+        <a class="button small" href="https://github.com/jgresham/nice-node/releases" target="_blank" rel="noopener noreferrer">Follow on Github</a>
       </div>
       <div class="downloadTilesFallback">
         <div class="fallbackContent">
@@ -178,6 +180,13 @@
           <div class="divider"></div>
           <div class="downloadPlatform">MacOS</div>
           <div class="downloadType apple">Apple Silicon and Intel</div>
+          <div class="downloadButton"><a class="downloadLink orange" href="#">Coming soon</a></div>
+        </div>
+        <!-- <div class="downloadTile macOs">
+          <div class="downloadIcon"></div>
+          <div class="divider"></div>
+          <div class="downloadPlatform">MacOS</div>
+          <div class="downloadType apple">Apple Silicon and Intel</div>
           <div class="downloadButton orange">
             <div class="downloadContainer">Download<div class="down"></div></div>
             <div class="downloadMenu">
@@ -185,20 +194,20 @@
               <div class="downloadText"><a href="#">Intel Chip</a></div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="downloadTile windows">
           <div class="downloadIcon"></div>
           <div class="divider"></div>
           <div class="downloadPlatform">Windows</div>
-          <div class="downloadType">64-bit</div>
-          <div class="downloadButton"><a class="downloadLink blue" href="#">Download</a></div>
+          <div class="downloadType apple">64-bit</div>
+          <div class="downloadButton"><a class="downloadLink blue" href="#">Coming soon</a></div>
         </div>
         <div class="downloadTile linux">
           <div class="downloadIcon"></div>
           <div class="divider"></div>
           <div class="downloadPlatform">Linux</div>
-          <div class="downloadType">64-bit</div>
-          <div class="downloadButton"><a class="downloadLink purple" href="#">Download</a></div>
+          <div class="downloadType apple">64-bit</div>
+          <div class="downloadButton"><a class="downloadLink purple" href="#">Coming soon</a></div>
         </div>
       </div>
     </section>
@@ -217,7 +226,7 @@
         <span class="arrow">↓</span>
       </button>
       <div class="panel">
-        In general, some of the benefits of running our own node are quoted as “preserving privacy, security, reduced reliance on third-party servers, censorship resistance and improved health and decentralization of the network.” Running a node is purely altruistic, so there are no financial rewards by running one!
+        When running a synced node you are improving the health and decentralisation of the network by storing a copy of the chain on your hard drive and seeding it to other nodes on the network. Running just a node is purely altruistic without monetary rewards. However, when pointing your wallet provider, like MetaMask, to use your own node as data provider you can also benefit from faster transactions while preserving your privacy and security.
       </div>
       <button class="accordion yellow">
         <span class="dot">●</span>
@@ -226,7 +235,7 @@
         <span class="arrow">↓</span>
       </button>
       <div class="panel">
-        Full node may take a few days to sync, depending on your bandwidth and hardware, and a light node may take a few minutes to fully sync.
+        Syncing a full node may take a few days, depending on your bandwidth and hardware. A light node should only take a few minutes.
       </div>
       <button class="accordion orange">
         <span class="dot">●</span>
@@ -235,11 +244,12 @@
         <span class="arrow">↓</span>
       </button>
       <div class="panel">
-        NiceNode currently supports full (snap sync mode by default) and light nodes. Archive node is planned to be supported in the future.
-
-Read more about the different types of nodes here 
-
-See a screenshot  of some other nodes NiceNode would like to support!
+        NiceNode is currently focused on running Ethereum nodes but are planning and designing to support multiple networks.There are currently two supported sync types for Ethereum nodes:
+        <ol>
+          <li>Full nodes with Snap Sync by default</li>
+          <li>Light nodes</li>
+          <li><del>Archive nodes</del> (on the roadmap)</li>
+        </ol>
       </div>
       <button class="accordion blue">
         <span class="dot">●</span>
@@ -248,7 +258,7 @@ See a screenshot  of some other nodes NiceNode would like to support!
         <span class="arrow">↓</span>
       </button>
       <div class="panel">
-        You don’t need 32 ETH to run a node. As long as you have the hardware that fulfills the minimum requirements, you’re able to run your own full node at home!
+        No, you don’t need 32 ETH to run an Ethereum node, you can run a full node with zero ETH. The 32 ETH requirement is to be a validator in Ethereum’s proof-of-stake (PoS) consensus mechanism, also referred to as “Staking” which is currently a feature planned for the future.
       </div>
       <button class="accordion purple">
         <span class="dot">●</span>
@@ -257,7 +267,7 @@ See a screenshot  of some other nodes NiceNode would like to support!
         <span class="arrow">↓</span>
       </button>
       <div class="panel">
-        Staking with validators has not been implemented yet.
+        No, however this is a feature we’d like to add sooner rather than later. Currently we’re focusing on making sure that running a node with NiceNode is a stable and pleasant experience before adding additional complexity.
       </div>
       <button class="accordion pink">
         <span class="dot">●</span>
@@ -266,36 +276,25 @@ See a screenshot  of some other nodes NiceNode would like to support!
         <span class="arrow">↓</span>
       </button>
       <div class="panel">
-        DAppNode requires users to install a new Operating System, but NiceNode works with what’s installed on your computer right now. Once you download, and run NiceNode, you’re good to go!
-
-For other differences, please see https://dappnode.io/  for additional DAppNode information.
+        DAppNode takes a different approach and requires users to install a new Operating System. NiceNode works with what’s installed on your computer right now. Once you download and run NiceNode you are pretty much good to go!
       </div>
       <button class="accordion yellow">
-        <span class="dot">●</span>
-        <span class="question">Can I switch clients on the fly?</span>
-        <span class="spacer"></span>
-        <span class="arrow">↓</span>
-      </button>
-      <div class="panel">
-        Answer here
-      </div>
-      <button class="accordion orange">
         <span class="dot">●</span>
         <span class="question">What happens when I get disconnected from the internet?</span>
         <span class="spacer"></span>
         <span class="arrow">↓</span>
       </button>
       <div class="panel">
-        Answer here
+        Nothing really, your node will stop syncing and resume once reconnected. Since NiceNode currently does not support staking there is no penalty.
       </div>
-      <button class="accordion blue">
+      <button class="accordion orange">
         <span class="dot">●</span>
         <span class="question">Do you plan on adding other networks in the future?</span>
         <span class="spacer"></span>
         <span class="arrow">↓</span>
       </button>
       <div class="panel">
-        Layer 2 nodes and testnet nodes will be supported in future updates!
+        We sure do! Join us on <a class="link" href="https://discord.gg/k3dpYU4Pn9" target="_blank" rel="noopener noreferrer">discord</a> and let us know what networks you would like to see added first.
       </div>
     </section>
   </main>

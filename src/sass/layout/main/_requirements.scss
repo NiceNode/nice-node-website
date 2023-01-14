@@ -60,6 +60,7 @@
   }
   .table-cell {
     width: 50%;
+    padding-right: 20px;
     @include media-breakpoint-up(sm){
       width: 33%;
     }
