@@ -68,6 +68,20 @@
           height: 48px;
         }
       }
+
+      &.ethStaker {
+        background-image: var(--ethStakerImage);
+        width: 25.46px;
+        height: 26px;
+        @include media-breakpoint-up(sm){
+          width: 39.17px;
+          height: 40px;
+        }
+        @include media-breakpoint-up(md){
+          width: 47px;
+          height: 48px;
+        }
+      }
     }
   }
 }
