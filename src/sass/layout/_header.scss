@@ -31,6 +31,7 @@ header {
     position: sticky;
     background-color: var(--bgMinimized);
     backdrop-filter: blur(30px);
+    transition: all 0.4s;
 
     .logo {
       @include media-breakpoint-up(md){

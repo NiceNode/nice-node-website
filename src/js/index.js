@@ -71,11 +71,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 const header = document.querySelector('header');
+const main = document.querySelector('main');
 window.addEventListener('scroll', function() {
-  if (window.scrollY > 0) {
-    header.classList.add('minimized');
-  } else {
+  if (main.getBoundingClientRect().top === 62) {
     header.classList.remove('minimized');
+  } else if (main.getBoundingClientRect().top <= 95 && main.getBoundingClientRect().top !== 62) {
+    header.classList.add('minimized');
   }
 });
 
