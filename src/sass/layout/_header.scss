@@ -92,12 +92,15 @@ header {
       display:none;
       @include media-breakpoint-up(md){
         display:flex;
+        gap: 33px;
+      }
+      @include media-breakpoint-up(mdlg){
+        gap: 48px;
       }
       flex-direction: row;
       justify-content: center;
       align-items: center;
       padding: 0px;
-      gap: 48px;
       flex: none;
   
       .requirements {
