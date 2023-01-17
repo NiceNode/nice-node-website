@@ -37,7 +37,13 @@
   }
 
   .downloadTilesFallback {
-    margin-top: 72px;
+    margin-top: 32px;
+    @include media-breakpoint-up(sm){
+      margin-top: 48px;
+    }
+    @include media-breakpoint-up(md){
+      margin-top: 72px;
+    }
     display: none;
     @media (pointer:coarse) {
       display: flex;
@@ -127,7 +133,13 @@
   }
 
   .downloadTilesContainer {
-    margin-top: 72px;
+    margin-top: 32px;
+    @include media-breakpoint-up(sm){
+      margin-top: 48px;
+    }
+    @include media-breakpoint-up(md){
+      margin-top: 72px;
+    }
     padding: 0px;
 
     @media (pointer:coarse) {

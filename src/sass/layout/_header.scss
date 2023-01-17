@@ -49,7 +49,7 @@ header {
 
     .icons {
       li {
-        width: 28px;
+        width: 26px;
         height: 26px;
       }
     }
@@ -193,10 +193,10 @@ header {
       background-color: var(--textColor);
       -webkit-mask-size: cover;
       mask-size: cover;
-      width: 28px;
+      width: 26px;
       height: 26px;
       @include media-breakpoint-up(md){
-        width: 45px;
+        width: 30px;
         height: 30px;
       }
       cursor: pointer;
