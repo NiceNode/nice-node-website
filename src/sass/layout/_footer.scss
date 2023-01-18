@@ -13,6 +13,9 @@ footer {
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  @include media-breakpoint-up(xlg){
+    background-size: auto;
+  }
 
   .logoContainer {
     display: flex;
