@@ -122,6 +122,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     transition: all 0.4s;
+    @supports (-webkit-touch-callout: none) {
+      transition: none;
+    }
     
     &.ui-01 {
       background-image: url('../images/feature-01.svg');
