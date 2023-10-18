@@ -1,6 +1,7 @@
 import '../sass/index.scss';
 import './accordion-carousel';
 import $ from 'jquery';
+import UAParser from 'ua-parser-js';
 
 const body = document.querySelector('body');
 const savedTheme = localStorage.getItem('theme');
@@ -89,3 +90,9 @@ $(document).click(function(event) {
     $(".downloadMenu").removeClass('visible');
   }
 });
+
+let parser = new UAParser(navigator.userAgent); // you need to pass the user-agent for nodejs
+console.log('parser: ', parser); // {}
+let parserResults = parser.getResult();
+console.log('parserResults: ', parserResults);
+// console.log($.ua.device);
