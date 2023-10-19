@@ -201,14 +201,23 @@
           <div class="divider"></div>
           <div class="downloadPlatform">Windows</div>
           <div class="downloadType apple">64-bit</div>
-          <div class="downloadButton"><a class="downloadLink blue" href="#">Coming soon</a></div>
+          <div class="downloadButton"><a class="downloadLink blue" id="windowsDownloadLink" download>Download</a></div>
         </div>
         <div class="downloadTile linux">
           <div class="downloadIcon"></div>
           <div class="divider"></div>
           <div class="downloadPlatform">Linux</div>
           <div class="downloadType apple">64-bit</div>
-          <div class="downloadButton"><a class="downloadLink purple" href="#">Coming soon</a></div>
+          <div class="downloadButton">
+            <div class="downloadContainer">Download<div class="down"></div></div>
+            <div class="downloadMenu">
+              <div class="downloadText"><a id="linuxDebDownloadLink" download>DEB (Ubuntu/Debian)</a></div>
+              <div class="downloadText"><a id="linuxRpmDownloadLink" download>RPM (Fedora)</a></div>
+              <div class="downloadText"><a id="linuxAppImageDownloadLink" download>AppImage</a></div>
+
+            </div>
+            <!-- <a class="downloadLink purple" id="windowsDownloadLink" download>Dow</a> -->
+          </div>
         </div>
       </div>
     </section>

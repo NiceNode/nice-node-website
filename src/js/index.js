@@ -105,9 +105,30 @@ $.getJSON( "https://api.github.com/repos/NiceNode/nice-node/releases/latest", fu
   // get asset.browser_download_url
   $.each(data.assets, function( index, val ) {
 
+    // mac
     console.log("asset: ", val);
     if(val.name.endsWith('arm64.dmg')) {
       $("#appleSiliconDownloadLink").attr('href', val.browser_download_url);
+    }
+    if(val.name.endsWith('alpha.dmg')) {
+      $("#appleIntelDownloadLink").attr('href', val.browser_download_url);
+    }
+
+    // windows
+    if(val.name.endsWith('alpha.exe')) {
+      $("#windowsDownloadLink").attr('href', val.browser_download_url);
+    }
+
+    // linux
+    // todo: detect arch
+    if(val.name.endsWith('.deb')) {
+      $("#linuxDebDownloadLink").attr('href', val.browser_download_url);
+    }
+    if(val.name.endsWith('.rpm')) {
+      $("#linuxRpmDownloadLink").attr('href', val.browser_download_url);
+    }
+    if(val.name.endsWith('.AppImage')) {
+      $("#linuxAppImageDownloadLink").attr('href', val.browser_download_url);
     }
 
   });
