@@ -93,6 +93,22 @@ $(document).click(function(event) {
 
 let parser = new UAParser(navigator.userAgent); // you need to pass the user-agent for nodejs
 console.log('parser: ', parser); // {}
+// console.log('navigator: ', navigator); // {}
 let parserResults = parser.getResult();
 console.log('parserResults: ', parserResults);
 // console.log($.ua.device);
+
+$.getJSON( "https://api.github.com/repos/NiceNode/nice-node/releases/latest", function( data ) {
+  console.log("NiceNode releases api data: ", data);
+
+  // loop over data.assets, check asset.name and parse out the ones we want to show in the UI.
+  // get asset.browser_download_url
+  $.each(data.assets, function( index, val ) {
+
+    console.log("asset: ", val);
+    if(val.name.endsWith('arm64.dmg')) {
+      $("#appleSiliconDownloadLink").attr('href', val.browser_download_url);
+    }
+
+  });
+});
