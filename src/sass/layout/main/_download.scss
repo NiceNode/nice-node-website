@@ -272,7 +272,7 @@
           font-size: 24px;
         }
       
-        &.orange, a {
+        &.buttonDropdown, a {
           box-sizing: border-box;
           padding: 13px 24px;
           width: fit-content;
@@ -286,17 +286,25 @@
           &.active, &:hover {
             background-color: $white;
             .down {
-              background-color: $orange;
               transition: all 0.5s;
             }
             &.orange {
               color: $orange;
+              .down {
+                background-color: $orange;
+              }
             }
             &.blue {
               color: $blue;
+              .down {
+                background-color: $blue;
+              }
             }
             &.purple {
               color: $purple;
+              .down {
+                background-color: $purple;
+              }
             }
           }
         }

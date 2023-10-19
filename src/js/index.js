@@ -81,14 +81,17 @@ window.addEventListener('scroll', function() {
   }
 });
 
-$(".downloadButton.orange").click(function() {
-  $(".downloadMenu").toggleClass('visible');
+// opens the menu when clicking
+$(".buttonDropdown").on('click', function(e) {
+  $(this).find(".downloadMenu").toggleClass('visible');
+  // keeps the click event from tiggering the html.onClick handler
+  e.stopPropagation();
 });
-
-$(document).click(function(event) {
-  if (!($(event.target).hasClass('downloadContainer') || $(event.target).hasClass('downloadButton orange') || $(event.target).hasClass('down'))) {
-    $(".downloadMenu").removeClass('visible');
-  }
+// hides the menu when clicking outside of them
+$("html").on('click', function() {
+  // if other component on click handlers stopPropagation, then this will NOT get
+  // triggered
+  $(".downloadMenu").removeClass('visible');
 });
 
 let parser = new UAParser(navigator.userAgent); // you need to pass the user-agent for nodejs
