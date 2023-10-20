@@ -2,6 +2,7 @@ import '../sass/index.scss';
 import './accordion-carousel';
 import $ from 'jquery';
 import UAParser from 'ua-parser-js';
+import jBox from 'jbox';
 
 const body = document.querySelector('body');
 const savedTheme = localStorage.getItem('theme');
@@ -95,8 +96,10 @@ $("html").on('click', function() {
 });
 
 $('.infoIcon').on('mouseenter',function() {
-  $(this).toggleClass('active');
-  $(this).find('.unstableTooltip').toggleClass('visible');
+  $(this).addClass('active');
+});
+$('.infoIcon').on('mouseexit',function() {
+  $(this).removeClass('active');
 });
 
 let parser = new UAParser(navigator.userAgent); // you need to pass the user-agent for nodejs
@@ -138,6 +141,17 @@ $.getJSON( "https://api.github.com/repos/NiceNode/nice-node/releases/latest", fu
     if(val.name.endsWith('.AppImage')) {
       $("#linuxAppImageDownloadLink").attr('href', val.browser_download_url);
     }
-
   });
+});
+
+// Create a jBox tooltip for every element that has class=unstableTooltip,
+//  and add class jboxUnstableTooltip to the jBox tooltip when it is created so
+//  that we can style the tooltip according to this class
+new jBox('Tooltip', {
+  attach: '.unstableTooltip',
+  addClass: 'jboxUnstableTooltip',
+  offset : {
+    x: 0,
+    y: -10
+  }
 });

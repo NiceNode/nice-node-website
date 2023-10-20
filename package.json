@@ -51,6 +51,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "core-js": "^3.26.1",
+    "jbox": "^1.3.3",
     "jquery": "^3.6.2",
     "ua-parser-js": "^1.0.36"
   }
