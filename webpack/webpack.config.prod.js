@@ -30,14 +30,6 @@ module.exports = merge(common, {
       filename: 'css/[name].[chunkhash:8].css',
       chunkFilename: 'css/[name].[chunkhash:8].chunk.js',
     }),
-    new CopyWebpackPlugin({ 
-      patterns: [
-        {
-          from: './src/images/favicon.png',
-          to: './images' // build/images/favicon.png
-        }
-      ]
-   })
   ],
   module: {
     rules: [

@@ -25,6 +25,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html'),
+      favicon: 'src/images/favicon.png'
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
