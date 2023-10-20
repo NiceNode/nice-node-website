@@ -13,7 +13,6 @@ try {
   console.error(err);
 }
 
-
 const body = document.querySelector('body');
 const savedTheme = localStorage.getItem('theme');
 
@@ -162,11 +161,12 @@ new jBox('Tooltip', {
 });
 
 
-// Event tracking
+// Event reporting
 $('a[download]').on('click', function() {
+  // Report device platform and architecture and whether the correct
+  // download link was used
   mixpanel.track('DownloadClick', {
-    'uaParserResults' : uaParserResults
+    'uaParserResults' : uaParserResults,
+    'downloadButton' : $(this).attr('id')
   });
 });
-
-console.log("process.env.MIXPANEL_TOKEN: ", process.env.MIXPANEL_TOKEN);
