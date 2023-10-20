@@ -22,7 +22,11 @@ module.exports = merge(common, {
   },
   plugins: [
     new Webpack.DefinePlugin({
+      // Strings need to be stringified here
+      // See https://webpack.js.org/plugins/define-plugin/#usage for more
+      // When changing these, you have to re-run `npm start` on each change
       'process.env.NODE_ENV': JSON.stringify('development'),
+      'process.env.MIXPANEL_TOKEN' : JSON.stringify('fake-token')
     }),
     new ESLintPlugin({
       extensions: 'js',
