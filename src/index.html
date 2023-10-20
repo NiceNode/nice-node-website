@@ -46,7 +46,6 @@
       </div>
       <div class="graphic">
         <div class="application">
-          <div class="comingSoon"></div>
         </div>
       </div>
     </section>
@@ -164,7 +163,7 @@
       <div class="downloadTilesFallback">
         <div class="fallbackContent">
           <div class="availableForContainer">
-            <div class="availableFor">Soon available for</div>
+            <div class="availableFor">Available for</div>
             <div class="icons">
               <div class="downloadIcon macOs"></div>
               <div class="downloadIcon windows"></div>
@@ -178,38 +177,51 @@
       </div>
       <div class="downloadTilesContainer">
         <div class="downloadTile macOs">
-          <div class="downloadIcon"></div>
-          <div class="divider"></div>
-          <div class="downloadPlatform">MacOS</div>
-          <div class="downloadType apple">Apple Silicon and Intel</div>
-          <div class="downloadButton"><a class="downloadLink orange" href="#">Coming soon</a></div>
-        </div>
-        <!-- <div class="downloadTile macOs">
-          <div class="downloadIcon"></div>
-          <div class="divider"></div>
-          <div class="downloadPlatform">MacOS</div>
-          <div class="downloadType apple">Apple Silicon and Intel</div>
-          <div class="downloadButton orange">
-            <div class="downloadContainer">Download<div class="down"></div></div>
-            <div class="downloadMenu">
-              <div class="downloadText"><a href="#">Apple Silicon</a></div>
-              <div class="downloadText"><a href="#">Intel Chip</a></div>
+          <div class="tileHeader">
+            <div class="downloadIcon"></div>
+            <div class="unstableContainer">
+              <span class="unstableText">Unstable</span>
+              <div class="infoIcon tooltip unstableTooltip" title="Expect issues or breaking updates"></div>
             </div>
           </div>
-        </div> -->
+          <div class="divider"></div>
+          <div class="downloadPlatform">MacOS</div>
+          <div class="downloadType apple">Apple Silicon and Intel</div>
+          <div class="downloadButton orange buttonDropdown">
+            <div class="downloadContainer">Download<div class="down"></div></div>
+            <div class="downloadMenu">
+              <div class="downloadText"><a id="appleSiliconDownloadLink" download>Apple Silicon</a></div>
+              <div class="downloadText"><a id="appleIntelDownloadLink" download>Intel Chip</a></div>
+            </div>
+          </div>
+        </div>
         <div class="downloadTile windows">
-          <div class="downloadIcon"></div>
+          <div class="tileHeader">
+            <div class="downloadIcon"></div>
+            <div class="unstableContainer">
+              <span class="unstableText">Unstable</span>
+              <div class="infoIcon tooltip unstableTooltip" title="Expect issues or breaking updates"></div>
+            </div>
+          </div>
           <div class="divider"></div>
           <div class="downloadPlatform">Windows</div>
           <div class="downloadType apple">64-bit</div>
-          <div class="downloadButton"><a class="downloadLink blue" href="#">Coming soon</a></div>
+          <div class="downloadButton"><a class="downloadLink blue" id="windowsDownloadLink" download>Download</a></div>
         </div>
         <div class="downloadTile linux">
           <div class="downloadIcon"></div>
           <div class="divider"></div>
           <div class="downloadPlatform">Linux</div>
           <div class="downloadType apple">64-bit</div>
-          <div class="downloadButton"><a class="downloadLink purple" href="#">Coming soon</a></div>
+          <div class="downloadButton purple buttonDropdown">
+            <div class="downloadContainer">Download<div class="down"></div></div>
+            <div class="downloadMenu">
+              <div class="downloadText"><a id="linuxDebDownloadLink" download>Ubuntu/Debian (.deb)</a></div>
+              <div class="downloadText"><a id="linuxRpmDownloadLink" download>Fedora (.rpm)</a></div>
+              <div class="downloadText"><a id="linuxAppImageDownloadLink" download>Any Linux (.AppImage)</a></div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
