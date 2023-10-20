@@ -168,3 +168,5 @@ $('a[download]').on('click', function() {
     'uaParserResults' : uaParserResults
   });
 });
+
+console.log("process.env.MIXPANEL_TOKEN: ", process.env.MIXPANEL_TOKEN)
