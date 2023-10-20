@@ -2,6 +2,8 @@ const Path = require('path');
 const Webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -28,6 +30,14 @@ module.exports = merge(common, {
       filename: 'css/[name].[chunkhash:8].css',
       chunkFilename: 'css/[name].[chunkhash:8].chunk.js',
     }),
+    new CopyWebpackPlugin({ 
+      patterns: [
+        {
+          from: './src/images/favicon.png',
+          to: './images' // build/images/favicon.png
+        }
+      ]
+   })
   ],
   module: {
     rules: [
