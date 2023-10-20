@@ -18,7 +18,7 @@ module.exports = merge(common, {
   },
   plugins: [
     // gets these env vars from the parent shell script (netlify vars)
-    new webpack.EnvironmentPlugin(['MIXPANEL_TOKEN']),
+    new Webpack.EnvironmentPlugin(['MIXPANEL_TOKEN']),
     new Webpack.DefinePlugin({
       // Strings need to be stringified here
       // See https://webpack.js.org/plugins/define-plugin/#usage for more
