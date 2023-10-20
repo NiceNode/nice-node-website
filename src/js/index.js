@@ -3,6 +3,15 @@ import './accordion-carousel';
 import $ from 'jquery';
 import UAParser from 'ua-parser-js';
 import jBox from 'jbox';
+import mixpanel from 'mixpanel-browser';
+
+try {
+  mixpanel.init(process.env.MIXPANEL_TOKEN || '', 
+    { track_pageview: true, persistence: 'localStorage' }
+  );
+} catch(err) {
+  console.error(err);
+}
 
 const body = document.querySelector('body');
 const savedTheme = localStorage.getItem('theme');
@@ -102,12 +111,9 @@ $('.infoIcon').on('mouseexit',function() {
   $(this).removeClass('active');
 });
 
-let parser = new UAParser(navigator.userAgent); // you need to pass the user-agent for nodejs
-console.log('parser: ', parser); // {}
-// console.log('navigator: ', navigator); // {}
-let parserResults = parser.getResult();
-console.log('parserResults: ', parserResults);
-// console.log($.ua.device);
+let uaParser = new UAParser(navigator.userAgent);
+let uaParserResults = uaParser.getResult();
+console.log('User device details for suggesting correct downloads: ', uaParserResults);
 
 $.getJSON( "https://api.github.com/repos/NiceNode/nice-node/releases/latest", function( data ) {
   console.log("NiceNode releases api data: ", data);
@@ -117,7 +123,6 @@ $.getJSON( "https://api.github.com/repos/NiceNode/nice-node/releases/latest", fu
   $.each(data.assets, function( index, val ) {
 
     // mac
-    console.log("asset: ", val);
     if(val.name.endsWith('arm64.dmg')) {
       $("#appleSiliconDownloadLink").attr('href', val.browser_download_url);
     }
@@ -131,7 +136,6 @@ $.getJSON( "https://api.github.com/repos/NiceNode/nice-node/releases/latest", fu
     }
 
     // linux
-    // todo: detect arch
     if(val.name.endsWith('.deb')) {
       $("#linuxDebDownloadLink").attr('href', val.browser_download_url);
     }
@@ -154,4 +158,15 @@ new jBox('Tooltip', {
     x: 0,
     y: -10
   }
+});
+
+
+// Event reporting
+$('a[download]').on('click', function() {
+  // Report device platform and architecture and whether the correct
+  // download link was used
+  mixpanel.track('DownloadClick', {
+    'uaParserResults' : uaParserResults,
+    'downloadButton' : $(this).attr('id')
+  });
 });
