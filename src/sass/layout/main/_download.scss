@@ -175,6 +175,7 @@
         padding: 56px;
         height: unset;
         display: inline-table;
+        vertical-align: top;
         border-radius: 100px;
         margin-bottom:0px;
       }
@@ -215,6 +216,27 @@
           @include media-breakpoint-up(mdlg){
             font-size: 20px;
           }
+        }
+      }
+
+      .tileHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+      }
+
+      .unstableContainer {
+        display: flex;
+      }
+
+      .infoIcon {
+        background-color: $white64;
+        width: 20px;
+        height: 20px;
+        -webkit-mask-image: url('../images/info-circle.svg');
+        mask-image: url('../images/info-circle.svg');
+        &.active {
+          background-color: $white;
         }
       }
 

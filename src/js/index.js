@@ -94,6 +94,11 @@ $("html").on('click', function() {
   $(".downloadMenu").removeClass('visible');
 });
 
+$('.infoIcon').on('mouseenter',function() {
+  $(this).toggleClass('active');
+  $(this).find('.unstableTooltip').toggleClass('visible');
+});
+
 let parser = new UAParser(navigator.userAgent); // you need to pass the user-agent for nodejs
 console.log('parser: ', parser); // {}
 // console.log('navigator: ', navigator); // {}

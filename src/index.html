@@ -163,7 +163,7 @@
       <div class="downloadTilesFallback">
         <div class="fallbackContent">
           <div class="availableForContainer">
-            <div class="availableFor">Soon available for</div>
+            <div class="availableFor">Available for</div>
             <div class="icons">
               <div class="downloadIcon macOs"></div>
               <div class="downloadIcon windows"></div>
@@ -176,15 +176,14 @@
         </div>
       </div>
       <div class="downloadTilesContainer">
-        <!-- <div class="downloadTile macOs">
-          <div class="downloadIcon"></div>
-          <div class="divider"></div>
-          <div class="downloadPlatform">MacOS</div>
-          <div class="downloadType apple">Apple Silicon and Intel</div>
-          <div class="downloadButton"><a class="downloadLink orange" href="#">Coming soon</a></div>
-        </div> -->
         <div class="downloadTile macOs">
-          <div class="downloadIcon"></div>
+          <div class="tileHeader">
+            <div class="downloadIcon"></div>
+            <div class="unstableContainer">
+              <span class="unstableText">Unstable</span>
+              <!-- <div class="infoIcon"></div> -->
+            </div>
+          </div>
           <div class="divider"></div>
           <div class="downloadPlatform">MacOS</div>
           <div class="downloadType apple">Apple Silicon and Intel</div>
@@ -197,7 +196,15 @@
           </div>
         </div>
         <div class="downloadTile windows">
-          <div class="downloadIcon"></div>
+          <div class="tileHeader">
+            <div class="downloadIcon"></div>
+            <div class="unstableContainer">
+              <span class="unstableText">Unstable</span>
+              <!-- <div class="infoIcon">
+                <div class="unstableTooltip">Expect issues or breaking updates</div>
+              </div> -->
+            </div>
+          </div>
           <div class="divider"></div>
           <div class="downloadPlatform">Windows</div>
           <div class="downloadType apple">64-bit</div>
@@ -216,7 +223,6 @@
               <div class="downloadText"><a id="linuxAppImageDownloadLink" download>AppImage</a></div>
 
             </div>
-            <!-- <a class="downloadLink purple" id="windowsDownloadLink" download>Dow</a> -->
           </div>
         </div>
       </div>
