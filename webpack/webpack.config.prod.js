@@ -4,6 +4,8 @@ const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common.js');
 
+console.log("process.env.MIXPANEL_TOKEN: ", process.env.MIXPANEL_TOKEN);
+
 module.exports = merge(common, {
   entry: {
     app: Path.resolve(__dirname, '../src/js/index.js'),

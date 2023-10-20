@@ -169,4 +169,4 @@ $('a[download]').on('click', function() {
   });
 });
 
-console.log("process.env.MIXPANEL_TOKEN: ", process.env.MIXPANEL_TOKEN)
+console.log("process.env.MIXPANEL_TOKEN: ", process.env.MIXPANEL_TOKEN);
