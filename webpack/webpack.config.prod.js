@@ -21,7 +21,7 @@ module.exports = merge(common, {
       // Strings need to be stringified here
       // See https://webpack.js.org/plugins/define-plugin/#usage for more
       'process.env.NODE_ENV': JSON.stringify('production'),
-      'process.env.MIXPANEL_TOKEN' : process.env.MIXPANEL_TOKEN
+      'process.env.MIXPANEL_TOKEN' : JSON.stringify(process.env.MIXPANEL_TOKEN)
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[chunkhash:8].css',
