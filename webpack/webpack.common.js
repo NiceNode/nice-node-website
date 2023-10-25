@@ -25,6 +25,10 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html'),
+      // Adds a non-base64 encoded favicon in the html
+      // Google requires a favicon link to show a favicon in search results
+      // More: https://developers.google.com/search/docs/appearance/favicon-in-search
+      favicon: 'src/images/favicon.png'
     }),
     new webpack.ProvidePlugin({
       $: "jquery",

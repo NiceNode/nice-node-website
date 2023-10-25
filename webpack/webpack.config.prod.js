@@ -2,6 +2,8 @@ const Path = require('path');
 const Webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -17,8 +19,12 @@ module.exports = merge(common, {
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
   plugins: [
+    // gets these env vars from the parent shell script (netlify vars)
     new Webpack.DefinePlugin({
+      // Strings need to be stringified here
+      // See https://webpack.js.org/plugins/define-plugin/#usage for more
       'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.MIXPANEL_TOKEN' : JSON.stringify(process.env.MIXPANEL_TOKEN)
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[chunkhash:8].css',
