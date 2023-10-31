@@ -65,6 +65,20 @@ footer {
     gap: 9px;
   }
 
+  .terms {
+    margin: 0 auto;
+    margin-top: 25px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      li:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+
   .copyright {
     margin: 0 auto;
     margin-top: 24px;
