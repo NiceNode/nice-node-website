@@ -1,5 +1,7 @@
 import '../sass/index.scss';
-import './accordion-carousel';
+if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+  import('./accordion-carousel');
+}
 import $ from 'jquery';
 import UAParser from 'ua-parser-js';
 import jBox from 'jbox';
