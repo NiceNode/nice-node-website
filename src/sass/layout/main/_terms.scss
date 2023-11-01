@@ -6,39 +6,37 @@
   @include media-breakpoint-up(md){
     padding: 0px 48px;
   }
+
   h3 {
-    margin-bottom: 10px;
-  }
-  h4 {
-    margin-top: 16px;
-    font-size: 24px;
-    line-height: 58px;
+    margin-bottom: 12px;
+    font-size: 32px;
+    line-height: 38px;
     @include media-breakpoint-up(sm){
-      margin-top: 24px;
-      font-size: 36px;
+      font-size: 48px;
       line-height: 58px;
     }
     @include media-breakpoint-up(md){
-      margin-top: 32px;
-      font-size: 48px;
+      font-size: 60px;
       line-height: 72px;
     }
   }
 
+  h4 {
+    margin-top: 40px;
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
   .lastUpdated {
+    color: var(--iconColor);
+    font-size: 16px;
     margin-bottom: 32px;
   }
+
   p {
-    font-size: 18px;
-    line-height: 32px;
-    @include media-breakpoint-up(sm){
-      font-size: 24px;
-      line-height: 32px;
-    }
-    @include media-breakpoint-up(md){
-      font-size: 40px;
-      line-height: 48px;
-    }
+    font-size: 16px;
+    line-height: 20px;
 
     span {
       background-size: cover;
