@@ -33,12 +33,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/terms.html'),
-      filename: 'terms.html',
+      filename: 'terms/index.html',
       favicon: 'src/images/favicon.png',
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/privacy.html'),
-      filename: 'privacy.html',
+      filename: 'privacy/index.html',
       favicon: 'src/images/favicon.png',
     }),
     new webpack.ProvidePlugin({
