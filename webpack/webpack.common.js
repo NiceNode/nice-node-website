@@ -4,6 +4,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+let devPageRouteFix = '';
+console.log("NODE_ENV: ", process.env.NODE_ENV)
+if(process.env.NODE_ENV !== 'production') {
+  devPageRouteFix = "/index"
+}
+
 module.exports = {
   entry: {
     app: Path.resolve(__dirname, '../src/scripts/index.js'),
@@ -33,12 +39,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/terms.html'),
-      filename: 'terms/index.html',
+      filename: `terms${devPageRouteFix}.html`,
       favicon: 'src/images/favicon.png',
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/privacy.html'),
-      filename: 'privacy/index.html',
+      filename: `privacy${devPageRouteFix}.html`,
       favicon: 'src/images/favicon.png',
     }),
     new webpack.ProvidePlugin({
