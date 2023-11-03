@@ -7,7 +7,13 @@ import mixpanel from 'mixpanel-browser';
 
 try {
   mixpanel.init(process.env.MIXPANEL_TOKEN || '', 
-    { track_pageview: true, persistence: 'localStorage' }
+    { 
+      track_pageview: true, 
+      // persistence: 'localStorage', 
+      // if true, the mixpanel cookie or localStorage entry
+      // will be deleted, and no user persistence will take place.
+      disable_persistence: true 
+    }
   );
 } catch(err) {
   console.error(err);
