@@ -36,6 +36,11 @@ module.exports = {
       // More: https://developers.google.com/search/docs/appearance/favicon-in-search
       favicon: 'src/images/favicon.png',
       filename: 'index.html',
+      meta: {
+        // "og:image": process.env.NODE_ENV === 'production' ? 'https://nicenode.xyz/public/NiceNode.png' : 'http://localhost:8080/public/NiceNode.png'
+        "og:image": '/public/NiceNode.png',
+        "twitter:image": '/public/NiceNode.png',
+      }
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/terms.html'),
@@ -71,7 +76,21 @@ module.exports = {
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        type: 'asset'
+        type: 'asset',
+        generator: {
+          filename: (pathData) => {
+            // Check if the file is in public
+            // The public folder is used for making specific assets available at a static url
+            // Things like logos and images used by search engines should be at a static url
+            if (pathData.filename.includes('public')) {
+              // Return a filename without a hash
+              return '[name][ext][query]';
+            }
+            // For all other images, return the filename with a hash to prevent cache conflicts
+            // when deploying a new version with the same name
+            return '[hash][ext][query]';
+          }
+        }
       },
     ],
   },
