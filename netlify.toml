@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "https://impact.nicenode.xyz"
-  to = "https://impact-dashboard.fly.dev"
-  status = 301
-  force = true
