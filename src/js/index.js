@@ -134,7 +134,7 @@ console.log(
 );
 // uaParserResults.cpu.architecture == 'amd64' // linux: firefox, brave
 navigator.userAgentData
-	.getHighEntropyValues([
+	?.getHighEntropyValues([
 		"architecture",
 		"model",
 		"platformVersion",
