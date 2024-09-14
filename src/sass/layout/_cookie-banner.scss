@@ -1,6 +1,6 @@
 .cookie-banner {
   position: fixed;
-  bottom: 30px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 70px);
@@ -17,6 +17,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   @include media-breakpoint-up(sm) {
+    bottom: 30px;
     max-width: 800px;
     flex-direction: row;
     justify-content: space-between;
