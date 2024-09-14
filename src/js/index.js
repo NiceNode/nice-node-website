@@ -10,17 +10,48 @@ import UAParser from "ua-parser-js";
 import jBox from "jbox";
 import mixpanel from "mixpanel-browser";
 
-try {
-	mixpanel.init(process.env.MIXPANEL_TOKEN || "", {
-		track_pageview: true,
-		// persistence: 'localStorage',
-		// if true, the mixpanel cookie or localStorage entry
-		// will be deleted, and no user persistence will take place.
-		disable_persistence: true,
-	});
-} catch (err) {
-	console.error(err);
+// Function to initialize Mixpanel
+function initializeMixpanel() {
+	try {
+		mixpanel.init(process.env.MIXPANEL_TOKEN || "", {
+			track_pageview: true,
+			disable_persistence: true,
+		});
+	} catch (err) {
+		console.error(err);
+	}
 }
+
+// Function to show or hide the cookie banner
+function toggleCookieBanner(show) {
+	const cookieBanner = document.getElementById('cookieBanner');
+	if (cookieBanner) {
+		cookieBanner.style.display = show ? 'flex' : 'none';
+	}
+}
+
+// Function to set cookie preference
+function setCookiePreference(allow) {
+	localStorage.setItem('cookiePreference', allow ? 'allow' : 'decline');
+	toggleCookieBanner(false);
+	if (allow) {
+		initializeMixpanel();
+	}
+}
+
+// Check for existing cookie preference
+const cookiePreference = localStorage.getItem('cookiePreference');
+if (cookiePreference === 'allow') {
+	initializeMixpanel();
+} else if (cookiePreference === null) {
+	toggleCookieBanner(true);
+} else {
+	toggleCookieBanner(false);
+}
+
+// Event listeners for cookie banner buttons
+document.getElementById('allowCookies').addEventListener('click', () => setCookiePreference(true));
+document.getElementById('declineCookies').addEventListener('click', () => setCookiePreference(false));
 
 const body = document.querySelector("body");
 const savedTheme = localStorage.getItem("theme");
@@ -201,10 +232,10 @@ new jBox("Tooltip", {
 
 // Event reporting
 $("a[download]").on("click", function () {
-	// Report device platform and architecture and whether the correct
-	// download link was used
-	mixpanel.track("DownloadClick", {
-		uaParserResults: uaParserResults,
-		downloadButton: $(this).attr("id"),
-	});
+	if (localStorage.getItem('cookiePreference') === 'allow') {
+		mixpanel.track("DownloadClick", {
+			uaParserResults: uaParserResults,
+			downloadButton: $(this).attr("id"),
+		});
+	}
 });
