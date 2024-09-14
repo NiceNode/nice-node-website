@@ -71,14 +71,56 @@
 
       &.ethStaker {
         background-image: var(--ethStakerImage);
-        width: 25.46px;
+        width: 16.73px;
         height: 26px;
         @include media-breakpoint-up(sm){
-          width: 39.17px;
+          width: 25.73px;
           height: 40px;
         }
         @include media-breakpoint-up(md){
-          width: 47px;
+          width: 30.88px;
+          height: 48px;
+        }
+      }
+
+      &.optimism {
+        background-image: var(--optimismImage);
+        width: 26px;
+        height: 26px;
+        @include media-breakpoint-up(sm){
+          width: 40px;
+          height: 40px;
+        }
+        @include media-breakpoint-up(md){
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      &.allNodes {
+        background-image: var(--allnodesImage);
+        width: 26px;
+        height: 26px;
+        @include media-breakpoint-up(sm){
+          width: 40px;
+          height: 40px;
+        }
+        @include media-breakpoint-up(md){
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      &.octant {
+        background-image: var(--octantImage);
+        width: 26px;
+        height: 26px;
+        @include media-breakpoint-up(sm){
+          width: 40px;
+          height: 40px;
+        }
+        @include media-breakpoint-up(md){
+          width: 48px;
           height: 48px;
         }
       }
