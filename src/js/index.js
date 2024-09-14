@@ -42,11 +42,12 @@ function setCookiePreference(allow) {
 // Check for existing cookie preference
 const cookiePreference = localStorage.getItem('cookiePreference');
 if (cookiePreference === 'allow') {
+	toggleCookieBanner(false); // Hide the banner if allowed
 	initializeMixpanel();
 } else if (cookiePreference === null) {
-	toggleCookieBanner(true);
+	toggleCookieBanner(true); // Show the banner if no preference set
 } else {
-	toggleCookieBanner(false);
+	toggleCookieBanner(true); // Show the banner if declined
 }
 
 // Event listeners for cookie banner buttons
